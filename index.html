@@ -1,0 +1,2909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ayush Sharma | Web Developer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: "#c6a15b",
+                        cream: "#f5f1e8",
+                        dark: "#080808",
+                        charcoal: "#111111"
+                    },
+                    fontFamily: {
+                        serif: ["Cormorant Garamond", "serif"],
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: #080808;
+        }
+
+        ::selection {
+            background: #c6a15b;
+            color: #080808;
+        }
+
+        /* Scrollbar */
+
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #080808;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c6a15b;
+        }
+
+        /* Loader */
+
+        #loader {
+            transition: 0.8s ease;
+        }
+
+        .loader-line {
+            width: 180px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .loader-line span {
+            display: block;
+            width: 0;
+            height: 100%;
+            background: #c6a15b;
+            animation: loading 1.8s forwards;
+        }
+
+        @keyframes loading {
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Navbar */
+
+        #navbar.scrolled {
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-link {
+            transition: 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #c6a15b;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            background:
+                url("/assets/hero.png") center/cover no-repeat;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                    #080808 0%,
+                    transparent 65%);
+        }
+
+        /* Buttons */
+
+        .gold-btn,
+        .outline-btn,
+        .black-btn {
+            padding: 14px 20px;
+            font-size: 10px;
+            letter-spacing: 0.17em;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .gold-btn {
+            background: #c6a15b;
+            color: #080808;
+        }
+
+        .gold-btn:hover {
+            background: #e4c77f;
+            transform: translateY(-3px);
+        }
+
+        .outline-btn {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: white;
+        }
+
+        .outline-btn:hover {
+            border-color: #c6a15b;
+            color: #c6a15b;
+            transform: translateY(-3px);
+        }
+
+        .black-btn {
+            background: #080808;
+            color: white;
+        }
+
+        /* Reveal Animation */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: 0.9s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Image */
+
+        .project-image {
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: 1s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Skills */
+
+        .skill-card {
+            background: #080808;
+            padding: 35px;
+            min-height: 300px;
+            transition: 0.4s;
+        }
+
+        .skill-card:hover {
+            background: #151515;
+            transform: translateY(-5px);
+        }
+
+        /* Experience */
+
+        .experience-box {
+            border-left: 1px solid #ffffff26;
+        }
+
+        /* Form */
+
+        .input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+            padding: 14px 0;
+            color: white;
+            outline: none;
+        }
+
+        .input:focus {
+            border-color: #c6a15b;
+        }
+
+        /* Modal */
+
+        .modal {
+            background: rgba(0, 0, 0, 0.80);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Mobile */
+
+        @media(max-width:768px) {
+
+            .project-image img {
+                height: 400px;
+            }
+
+            .hero {
+                background-position: 65% center;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body class="text-white font-sans">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50
+           transition-all duration-500">
+
+        <nav class="max-w-7xl mx-auto px-5 md:px-8 py-5
+                flex items-center justify-between">
+
+            <!-- LOGO -->
+            <a href="#home" class="font-bold tracking-[0.15em] text-sm whitespace-nowrap">
+                AYUSH SHARMA<span class="text-gold">.</span>
+            </a>
+
+
+            <!-- DESKTOP MENU -->
+            <div class="hidden lg:flex items-center gap-8
+                    text-[12px] uppercase tracking-[0.20em]">
+
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index3.html" class="nav-link">About</a>
+                <a href="index4.html" class="nav-link">Skills</a>
+                <a href="index5.html" class="nav-link">Work</a>
+                <a href="index6.html" class="nav-link">Experience</a>
+                <a href="index7.html" class="nav-link">Contact</a>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="flex items-center gap-5">
+
+                <!-- LET'S TALK -->
+                <a href="index7.html" class="hidden sm:block border border-white/20
+                       px-5 py-3 text-[10px]
+                       tracking-[0.15em]
+                       hover:border-gold hover:text-gold
+                       transition whitespace-nowrap">
+
+                    LET'S TALK ↗
+
+                </a>
+
+                <!-- LOGIN -->
+                <a href="index1.html" class="sm:block text-white
+                text-3xl hover:text-gold transition duration-300" title="Login">
+
+                    <i class="fa-solid fa-circle-user"></i>
+
+                </a>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="menuBtn" class="lg:hidden border border-white
+                       w-11 h-11 flex flex-col
+                       items-center justify-center gap-2 mr-6">
+
+                    <span class="w-5 h-[2px] bg-white"></span>
+                    <span class="w-5 h-[2px] bg-white"></span>
+                    <span class="w-5 h-[2px] bg-white"></span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-40
+           translate-x-full transition-transform duration-500">
+
+        <!-- CLOSE BUTTON -->
+        <button id="closeMenu" class="absolute top-20 right-6
+               w-11 h-11
+               text-3xl text-black">
+
+            ×
+
+        </button>
+
+        <!-- MOBILE LINKS -->
+        <div class="font-serif text-3xl space-y-6 mt-20 ml-6 text-black">
+
+            <a href="#home" class="mobile-link block">
+                Home
+            </a>
+
+            <a href="index3.html" class="mobile-link block">
+                About
+            </a>
+
+            <a href="index4.html" class="mobile-link block">
+                Skills
+            </a>
+
+            <a href="index5.html" class="mobile-link block">
+                Work
+            </a>
+
+            <a href="index6.html" class="mobile-link block">
+                Experience
+            </a>
+
+            <a href="index7.html" class="mobile-link block">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+     HERO
+========================================================= -->
+
+    <section id="home" class="hero flex items-end">
+
+        <div class="relative z-10
+                max-w-7xl mx-auto w-full
+                px-5 md:px-8 pb-16 md:pb-24">
+
+            <p class="text-gold text-xs
+                  tracking-[0.10em] reveal lg:tracking-[0.28em]">
+
+                CREATIVE WEB DEVELOPER · INDIA
+
+            </p>
+
+
+            <h1 class="font-serif
+                   text-[20vw] md:text-[12vw]
+                   leading-[0.75]
+                   tracking-[-0.05em]
+                   mt-7 reveal">
+
+                AYUSH
+
+                <br>
+
+                <span class="text-gold italic">
+                    SHARMA
+                </span>
+
+            </h1>
+
+
+            <div class="max-w-2xl mt-10 reveal">
+
+                <p class="text-lg md:text-xl
+                      text-white/70 leading-relaxed">
+
+                    Building modern, responsive
+                    and user-friendly web experiences.
+
+                </p>
+
+
+                <div class="flex flex-wrap gap-3 mt-7">
+
+                    <a href="index5.html" class="gold-btn">
+
+                        VIEW MY PROJECTS ↗
+
+                    </a>
+
+                    <button onclick="openResume()" class="outline-btn">
+
+                        DOWNLOAD RESUME ↓
+
+                    </button>
+
+                    <a href="index7.html" class="outline-btn">
+
+                        CONTACT ME
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     INTRO
+========================================================= -->
+
+    <section class="bg-cream text-dark
+                py-28 md:py-40
+                px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-xs tracking-[0.25em]
+                  text-[#766343] reveal">
+
+                01 / INTRODUCTION
+
+            </p>
+
+
+            <h2 class="font-serif
+                   text-5xl md:text-8xl
+                   leading-[0.9]
+                   max-w-6xl mt-8 reveal">
+
+                I DON'T JUST BUILD WEBSITES.
+
+                <span class="text-gold italic">
+                    I CREATE DIGITAL EXPERIENCES.
+                </span>
+
+            </h2>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     ABOUT
+========================================================= -->
+
+    <section id="about" class="py-28 md:py-40
+                px-5 md:px-8 bg-white">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-gold text-xs
+                  tracking-[0.25em] reveal">
+
+                02 / ABOUT ME
+
+            </p>
+
+
+            <h2 class="font-serif
+                   text-6xl md:text-9xl
+                   mt-4 reveal text-black">
+
+                About Me
+
+            </h2>
+
+
+            <div class="grid lg:grid-cols-2
+                    gap-14 lg:gap-24
+                    mt-16 items-center">
+
+
+                <div class="overflow-hidden reveal">
+
+                    <img src="/assets/about1.png" class="w-full h-[500px] md:h-[640px] object-cover bg-center">
+
+                </div>
+
+
+                <div class="reveal">
+
+                    <p class="font-serif
+                          text-4xl md:text-5xl
+                          leading-tight text-black">
+
+                        Hello, I'm
+
+                        <span class="text-gold italic">
+                            Ayush Sharma
+                        </span>,
+
+                        a Web Developer passionate
+                        about creating modern,
+                        responsive and visually
+                        engaging websites.
+
+                    </p>
+
+
+                    <p class="text-black/90
+                          leading-8 mt-8">
+
+                        I enjoy transforming ideas
+                        and designs into clean,
+                        responsive interfaces.
+                        My focus is frontend
+                        development, practical
+                        problem solving and
+                        building real-world projects.
+
+                    </p>
+
+
+                    <div class="grid sm:grid-cols-2
+                            mt-10 border
+                            border-white/10 text-black">
+
+                        <div class="p-6 border-b sm:border-r border-white/10">
+
+                            <span class="text-gold">
+                                01
+                            </span>
+
+                            <p class="mt-3">
+                                BSc Graduate
+                            </p>
+
+                        </div>
+
+
+                        <div class="p-6 border-b border-white/10">
+
+                            <span class="text-gold">
+                                02
+                            </span>
+
+                            <p class="mt-3">
+                                Web Development Training
+                            </p>
+
+                        </div>
+
+
+                        <div class="p-6 sm:border-r border-white/10">
+
+                            <span class="text-gold">
+                                03
+                            </span>
+
+                            <p class="mt-3">
+                                Frontend Development
+                            </p>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <span class="text-gold">
+                                04
+                            </span>
+
+                            <p class="mt-3">
+                                Responsive Design
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+    <section class="bg-charcoal
+                py-28 md:py-36
+                px-5 md:px-8 bg-white text-black">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-gold text-xs
+                  tracking-[0.25em] reveal">
+
+                03 / EDUCATION
+
+            </p>
+
+
+            <div class="grid lg:grid-cols-2
+                    gap-16 mt-14">
+
+
+                <div class="border-t
+                        border-white/10
+                        pt-6 reveal">
+
+                    <span class="text-gold text-xs">
+                        01
+                    </span>
+
+                    <p class="text-xs tracking-[0.2em]
+                          text-gray-900 mt-7">
+
+                        BSC — GRADUATE
+
+                    </p>
+
+                    <h3 class="font-serif
+                           text-4xl md:text-5xl
+                           mt-3">
+
+                        Bachelor of Science
+
+                    </h3>
+
+                    <p class="text-gold mt-2">
+                        Mathematics
+                    </p>
+
+                    <p class="text-black/90 mt-5">
+                        Chhatrapati Shivaji Maharaj,
+                        Kanpur
+                    </p>
+
+                </div>
+
+
+
+                <div class="border-t
+                        border-white/10
+                        pt-6 reveal">
+
+                    <span class="text-gold text-xs">
+                        02
+                    </span>
+
+                    <p class="text-xs tracking-[0.2em]
+                          text-gray-900 mt-7">
+
+                        WEB DEVELOPMENT TRAINING
+
+                    </p>
+
+                    <h3 class="font-serif
+                           text-4xl md:text-5xl
+                           mt-3">
+
+                        Frontend Development
+
+                    </h3>
+
+                    <p class="text-gold mt-2">
+                        Indore
+                    </p>
+
+
+                    <div class="flex flex-wrap
+                            gap-2 mt-6">
+
+                        <span class="border border-white/10 px-3 py-2 text-xs">
+                            HTML
+                        </span>
+
+                        <span class="border border-white/10 px-3 py-2 text-xs">
+                            CSS
+                        </span>
+
+                        <span class="border border-white/10 px-3 py-2 text-xs">
+                            JavaScript
+                        </span>
+
+                        <span class="border border-white/10 px-3 py-2 text-xs">
+                            Tailwind CSS
+                        </span>
+
+                        <span class="border border-white/10 px-3 py-2 text-xs">
+                            Responsive Design
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     SKILLS
+========================================================= -->
+
+    <section id="skills" class="py-28 md:py-40
+                px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-gold text-xs
+                  tracking-[0.25em] reveal">
+
+                04 / TECHNICAL SKILLS
+
+            </p>
+
+
+            <h2 class="font-serif
+                   text-6xl md:text-9xl
+                   mt-4 reveal">
+
+                What I Know
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-3
+                    gap-px bg-white/10
+                    mt-16">
+
+
+                <div class="skill-card reveal">
+
+                    <span class="text-gold text-xs">
+                        01
+                    </span>
+
+                    <h3 class="font-serif
+                           text-4xl mt-8">
+
+                        Frontend
+
+                    </h3>
+
+                    <ul class="mt-7
+                           space-y-4
+                           text-white/60">
+
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Tailwind CSS</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <span class="text-gold text-xs">
+                        02
+                    </span>
+
+                    <h3 class="font-serif
+                           text-4xl mt-8">
+
+                        Development
+
+                    </h3>
+
+                    <ul class="mt-7
+                           space-y-4
+                           text-white/60">
+
+                        <li>Responsive Web Design</li>
+                        <li>UI Implementation</li>
+                        <li>Website Development</li>
+                        <li>Cross-Browser Design</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <span class="text-gold text-xs">
+                        03
+                    </span>
+
+                    <h3 class="font-serif
+                           text-4xl mt-8">
+
+                        Tools
+
+                    </h3>
+
+                    <ul class="mt-7
+                           space-y-4
+                           text-white/60">
+
+                        <li>VS Code</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Browser DevTools</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+    <section id="work" class="bg-cream text-dark
+                py-28 md:py-40
+                px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-[#766343]
+                  text-xs tracking-[0.25em]
+                  reveal">
+
+                05 / SELECTED WORK
+
+            </p>
+
+
+            <h2 class="font-serif
+                   text-6xl md:text-9xl
+                   mt-4 reveal">
+
+                Featured Projects
+
+            </h2>
+
+
+            <div class="space-y-24 mt-20">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="reveal">
+
+                    <div class="project-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85">
+
+                    </div>
+
+
+                    <div class="mt-7
+                            flex flex-col md:flex-row
+                            justify-between gap-5">
+
+                        <div>
+
+                            <p class="text-xs tracking-[0.2em] text-black/40">
+                                01 / LUXURY HOTEL
+                            </p>
+
+                            <h3 class="font-serif
+                                   text-5xl md:text-7xl
+                                   mt-2">
+
+                                THE AURELIA
+
+                            </h3>
+
+                            <p class="text-black/55
+                                  max-w-2xl mt-4">
+
+                                Designed and developed
+                                a premium luxury hotel
+                                website with responsive
+                                layouts, booking
+                                interactions, room
+                                sections, gallery,
+                                facilities and contact
+                                functionality.
+
+                            </p>
+
+                        </div>
+
+
+                        <button onclick="openProject('aurelia')" class="h-fit border-b
+                                   border-black pb-2
+                                   text-xs tracking-[0.15em]">
+
+                            VIEW PROJECT ↗
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="reveal">
+
+                    <div class="project-image">
+
+                        <img
+                            src="https://5.imimg.com/data5/SELLER/Default/2023/3/296502111/FI/GX/OG/85349617/jewellery-shop-interior-designing-service.jpeg">
+
+                    </div>
+
+
+                    <div class="mt-7
+                            flex flex-col md:flex-row
+                            justify-between gap-5">
+
+                        <div>
+
+                            <p class="text-xs tracking-[0.2em] text-black/40">
+                                02 / JEWELLERY
+                            </p>
+
+                            <h3 class="font-serif
+                                   text-5xl md:text-7xl
+                                   mt-2">
+
+                                KATARIA JEWELS
+
+                            </h3>
+
+                            <p class="text-black/55
+                                  max-w-2xl mt-4">
+
+                                Created a premium
+                                jewellery website
+                                focused on luxury
+                                visual presentation,
+                                elegant typography
+                                and responsive design.
+
+                            </p>
+
+                        </div>
+
+
+                        <button onclick="openProject('jewels')" class="h-fit border-b
+                                   border-black pb-2
+                                   text-xs tracking-[0.15em]">
+
+                            VIEW PROJECT ↗
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="reveal">
+
+                    <div class="project-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=90">
+
+                    </div>
+
+
+                    <div class="mt-7
+                            flex flex-col md:flex-row
+                            justify-between gap-5">
+
+                        <div>
+
+                            <p class="text-xs tracking-[0.2em] text-black/40">
+                                03 / AUTOMOTIVE
+                            </p>
+
+                            <h3 class="font-serif
+                                   text-5xl md:text-7xl
+                                   mt-2">
+
+                                XEV AUTOMOTIVE
+
+                            </h3>
+
+                            <p class="text-black/55
+                                  max-w-2xl mt-4">
+
+                                Developed a modern
+                                automotive landing page
+                                with a premium visual
+                                layout, responsive
+                                navigation and
+                                product-focused sections.
+
+                            </p>
+
+                        </div>
+
+
+                        <button onclick="openProject('xev')" class="h-fit border-b
+                                   border-black pb-2
+                                   text-xs tracking-[0.15em]">
+
+                            VIEW PROJECT ↗
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+    <section id="experience" class="py-28 md:py-40
+                px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-gold text-xs
+                  tracking-[0.25em] reveal">
+
+                06 / EXPERIENCE
+
+            </p>
+
+
+            <div class="grid lg:grid-cols-2
+                    gap-16 mt-14">
+
+
+                <div class="reveal">
+
+                    <h2 class="font-serif
+                           text-6xl md:text-8xl
+                           leading-none">
+
+                        Practical
+
+                        <br>
+
+                        <span class="text-gold italic">
+                            Experience
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="experience-box
+                        pl-7 md:pl-12 reveal">
+
+                    <p class="text-gold text-xs
+                          tracking-[0.2em]">
+
+                        WEB DEVELOPMENT INTERN
+
+                    </p>
+
+
+                    <h3 class="font-serif
+                           text-4xl mt-4">
+
+                        Frontend Development
+
+                    </h3>
+
+
+                    <ul class="mt-8
+                           space-y-4
+                           text-white/60
+                           leading-7">
+
+                        <li>
+                            — Developing website layouts
+                        </li>
+
+                        <li>
+                            — Creating responsive designs
+                        </li>
+
+                        <li>
+                            — Fixing UI issues
+                        </li>
+
+                        <li>
+                            — Debugging HTML/CSS problems
+                        </li>
+
+                        <li>
+                            — Improving mobile responsiveness
+                        </li>
+
+                        <li>
+                            — Working with JavaScript
+                        </li>
+
+                        <li>
+                            — Implementing designs using Tailwind CSS
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Problem -->
+
+            <div class="border
+                    border-white/10
+                    bg-charcoal
+                    p-8 md:p-12
+                    mt-20 reveal">
+
+                <p class="text-gold text-xs
+                      tracking-[0.25em]">
+
+                    A PROBLEM I SOLVED
+
+                </p>
+
+
+                <h3 class="font-serif
+                       text-4xl md:text-6xl
+                       mt-5 max-w-4xl">
+
+                    Making a website adapt
+                    correctly across mobile,
+                    tablet and desktop.
+
+                </h3>
+
+
+                <p class="text-white/50
+                      leading-8
+                      max-w-3xl mt-7">
+
+                    One practical problem I
+                    worked on was a website
+                    layout that was not adapting
+                    correctly across different
+                    screen sizes.
+
+                    I identified responsive CSS
+                    issues, adjusted the layout
+                    and improved the responsiveness
+                    so the interface worked more
+                    consistently across devices.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     WHAT I CAN DO
+========================================================= -->
+
+    <section class="bg-charcoal
+                py-28 md:py-36
+                px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-gold text-xs
+                  tracking-[0.25em] reveal">
+
+                07 / INTERVIEW SKILLS
+
+            </p>
+
+
+            <h2 class="font-serif
+                   text-6xl md:text-9xl
+                   mt-4 reveal">
+
+                What I Can Do
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    mt-16 border-t
+                    border-white/10">
+
+
+                <div class="p-7 border-b
+                        border-white/10 reveal">
+
+                    <span class="text-gold">
+                        01
+                    </span>
+
+                    <h3 class="font-serif
+                           text-3xl mt-4">
+
+                        Build responsive websites
+
+                    </h3>
+
+                </div>
+
+
+                <div class="p-7 border-b
+                        border-white/10 reveal">
+
+                    <span class="text-gold">
+                        02
+                    </span>
+
+                    <h3 class="font-serif
+                           text-3xl mt-4">
+
+                        Convert designs into HTML/CSS
+
+                    </h3>
+
+                </div>
+
+
+                <div class="p-7 border-b
+                        border-white/10 reveal">
+
+                    <span class="text-gold">
+                        03
+                    </span>
+
+                    <h3 class="font-serif
+                           text-3xl mt-4">
+
+                        Create layouts using Tailwind CSS
+
+                    </h3>
+
+                </div>
+
+
+                <div class="p-7 border-b
+                        border-white/10 reveal">
+
+                    <span class="text-gold">
+                        04
+                    </span>
+
+                    <h3 class="font-serif
+                           text-3xl mt-4">
+
+                        Add JavaScript interactions
+
+                    </h3>
+
+                </div>
+
+
+                <div class="p-7 border-b
+                        border-white/10 reveal">
+
+                    <span class="text-gold">
+                        05
+                    </span>
+
+                    <h3 class="font-serif
+                           text-3xl mt-4">
+
+                        Debug frontend issues
+
+                    </h3>
+
+                </div>
+
+
+                <div class="p-7 border-b
+                        border-white/10 reveal">
+
+                    <span class="text-gold">
+                        06
+                    </span>
+
+                    <h3 class="font-serif
+                           text-3xl mt-4">
+
+                        Improve mobile responsiveness
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     STRENGTHS
+========================================================= -->
+
+    <section class="py-28 md:py-40
+                px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-gold text-xs
+                  tracking-[0.25em] reveal">
+
+                08 / MY STRENGTHS
+
+            </p>
+
+
+            <div class="grid md:grid-cols-3
+                    gap-10 mt-14">
+
+
+                <div class="border-t
+                        border-white/10
+                        pt-6 reveal">
+
+                    <span class="text-gold">
+                        01
+                    </span>
+
+                    <h3 class="font-serif
+                           text-4xl mt-7">
+
+                        Hardworking
+
+                    </h3>
+
+                    <p class="text-white/50
+                          leading-7 mt-4">
+
+                        I am a hardworking person
+                        and I always try to complete
+                        my work properly.
+
+                    </p>
+
+                </div>
+
+
+                <div class="border-t
+                        border-white/10
+                        pt-6 reveal">
+
+                    <span class="text-gold">
+                        02
+                    </span>
+
+                    <h3 class="font-serif
+                           text-4xl mt-7">
+
+                        Quick Learner
+
+                    </h3>
+
+                    <p class="text-white/50
+                          leading-7 mt-4">
+
+                        I learn new technologies
+                        quickly and I enjoy
+                        improving my skills.
+
+                    </p>
+
+                </div>
+
+
+                <div class="border-t
+                        border-white/10
+                        pt-6 reveal">
+
+                    <span class="text-gold">
+                        03
+                    </span>
+
+                    <h3 class="font-serif
+                           text-4xl mt-7">
+
+                        Problem Solving
+
+                    </h3>
+
+                    <p class="text-white/50
+                          leading-7 mt-4">
+
+                        I try to understand the
+                        problem first and then
+                        find a practical solution.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     INTERVIEW INTRO
+========================================================= -->
+
+    <section class="bg-cream text-dark
+                py-28 md:py-40
+                px-5 md:px-8 bg-white text-black">
+
+        <div class="max-w-5xl mx-auto
+                text-center">
+
+            <p class="text-[#766343]
+                  text-xs tracking-[0.25em]
+                  reveal">
+
+                09 / INTERVIEW INTRODUCTION
+
+            </p>
+
+
+            <h2 class="font-serif
+                   text-5xl md:text-8xl
+                   mt-6 reveal">
+
+                My Introduction
+
+            </h2>
+
+
+            <p id="introText" class="text-xl md:text-2xl
+                  leading-9 text-black/60
+                  mt-10 reveal">
+
+                Good afternoon, my name is
+                Ayush Sharma. I am from Uttar
+                Pradesh and currently living in
+                Indore. I have completed my BSc
+                in Mathematics and I am developing
+                my skills in web development.
+                I have experience working with
+                HTML, CSS, JavaScript and
+                Tailwind CSS. I enjoy creating
+                responsive and modern websites.
+                I am a hardworking person and a
+                quick learner. My goal is to become
+                a skilled Web Developer and
+                continue growing in the field of
+                web development.
+
+            </p>
+
+
+            <button id="copyIntro" class="gold-btn mt-9">
+
+                COPY INTRODUCTION
+
+            </button>
+
+
+            <p id="copyMessage" class="text-gold text-sm mt-4 hidden">
+
+                Copied successfully!
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     CAREER GOAL
+========================================================= -->
+
+    <section class="py-28 md:py-40
+                px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-gold text-xs
+                  tracking-[0.25em] reveal">
+
+                10 / CAREER GOAL
+
+            </p>
+
+
+            <h2 class="font-serif
+                   text-7xl md:text-[11vw]
+                   leading-[0.8]
+                   mt-8 reveal">
+
+                BUILD.
+
+                <br>
+
+                LEARN.
+
+                <br>
+
+                <span class="text-gold italic">
+                    GROW.
+                </span>
+
+            </h2>
+
+
+            <p class="max-w-3xl
+                  text-xl md:text-2xl
+                  text-white/50
+                  leading-9 mt-12 reveal">
+
+                My goal is to become a skilled
+                Web Developer, work on real-world
+                projects, continuously improve
+                my technical skills and eventually
+                build my own web development company.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     RESUME CTA
+========================================================= -->
+
+    <section class="bg-gold text-dark
+                py-24 md:py-32
+                px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto
+                flex flex-col md:flex-row
+                justify-between
+                items-start md:items-center
+                gap-10">
+
+            <div>
+
+                <p class="text-xs
+                      tracking-[0.25em]">
+
+                    READY FOR THE NEXT OPPORTUNITY?
+
+                </p>
+
+                <h2 class="font-serif
+                       text-5xl md:text-8xl
+                       mt-3">
+
+                    Let's build something.
+
+                </h2>
+
+            </div>
+
+
+            <div class="flex flex-wrap gap-3">
+
+                <button onclick="downloadResume()" class="black-btn">
+
+                    DOWNLOAD RESUME ↓
+
+                </button>
+
+
+                <button onclick="openResume()" class="border border-black/30
+                           px-6 py-4
+                           text-xs tracking-[0.15em]
+                           hover:bg-black
+                           hover:text-white
+                           transition">
+
+                    VIEW RESUME
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     CONTACT
+========================================================= -->
+
+    <section id="contact" class="py-28 md:py-40
+                px-5 md:px-8 bg-black text-white">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-gold text-xs
+                  tracking-[0.25em] reveal">
+
+                11 / CONTACT
+
+            </p>
+
+
+            <div class="grid lg:grid-cols-2
+                    gap-16 mt-10">
+
+
+                <div class="reveal">
+
+                    <h2 class="font-serif
+                           text-7xl md:text-[9vw]
+                           leading-[0.8]">
+
+                        LET'S
+
+                        <br>
+
+                        <span class="text-gold italic">
+                            CONNECT.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="text-white/50
+                          leading-8
+                          max-w-md mt-10">
+
+                        Whether you have a new
+                        project, a business idea
+                        or simply want to discuss
+                        something interesting —
+                        I'd love to hear from you.
+
+                    </p>
+
+
+                    <div class="mt-10 space-y-5">
+
+                        <div>
+
+                            <p class="text-gray-500
+                                  text-[10px]
+                                  tracking-[0.2em]">
+
+                                EMAIL
+
+                            </p>
+
+                            <p class="mt-2">
+                                sayush7922@gmail.com                           
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-gray-500
+                                  text-[10px]
+                                  tracking-[0.2em]">
+
+                                LOCATION
+
+                            </p>
+
+                            <p class="mt-2">
+                                64, behind bcm hights, Sector A, Suman Nagar, Indore, Madhya Pradesh 452010, India
+                            </p>
+
+                        </div>
+
+
+                        <div class="flex gap-5 pt-3">
+
+                            <a href="#" class="text-xs
+                                  tracking-[0.15em]
+                                  hover:text-gold">
+
+                                GitHub ↗
+
+                            </a>
+
+                            <a href="#" class="text-xs
+                                  tracking-[0.15em]
+                                  hover:text-gold">
+
+                                LinkedIn ↗
+
+                            </a>
+
+                            <a href="#" class="text-xs
+                                  tracking-[0.15em]
+                                  hover:text-gold">
+
+                                Instagram ↗
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <form id="contactForm" class="space-y-7 reveal">
+
+
+                    <div>
+
+                        <label class="text-gold
+                                  text-[10px]
+                                  tracking-[0.2em]">
+
+                            NAME
+
+                        </label>
+
+                        <input required type="text" class="input" placeholder="Your name">
+
+                    </div>
+
+
+                    <div>
+
+                        <label class="text-gold
+                                  text-[10px]
+                                  tracking-[0.2em]">
+
+                            EMAIL
+
+                        </label>
+
+                        <input required type="email" class="input" placeholder="you@example.com">
+
+                    </div>
+
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-gold
+                                  text-[10px]
+                                  tracking-[0.2em]" for="projectType">Project Type *</label>
+                        <div class="relative w-full">
+                            <select
+                                class="w-full appearance-none bg-transparent border-0 border-b border-gray-500 px-0 py-4 pr-10 text-white text-sm outline-none focus:border-white transition-all cursor-pointer"
+                                id="projectType" required>
+                                <option class="bg-gray-900 text-white" value="Full Website">
+                                    Full Luxury Website
+                                </option>
+
+                                <option class="bg-gray-900 text-white" value="Landing Page">
+                                    Hero Landing Experience
+                                </option>
+
+                                <option class="bg-gray-900 text-white" value="UI Implementation">
+                                    Figma to Code Implementation
+                                </option>
+
+                                <option class="bg-gray-900 text-white" value="Website Redesign">
+                                    Modernization &amp; Redesign
+                                </option>
+
+                                <option class="bg-gray-900 text-white" value="Full-Time / Retainer">
+                                    Full-Time / Engineering Retainer
+                                </option>
+                            </select>
+
+                            <span
+                                class="absolute right-2 top-1/2 -translate-y-1/2 text-white pointer-events-none text-xl">
+                                ↓
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div>
+
+                        <label class="text-gold
+                                  text-[10px]
+                                  tracking-[0.2em]">
+
+                            Anticipated Scope / Investment
+
+                        </label>
+                        <div class="relative w-full">
+                            <select id="budgetRange"
+                                class="w-full appearance-none bg-transparent border-0 border-b border-gray-500 px-0 py-4 pr-8 text-white text-sm outline-none focus:border-white cursor-pointer">
+                                <option class="bg-gray-900 text-white">$3,000 — $5,000 USD</option>
+                                <option class="bg-gray-900 text-white">$5,000 — $10,000 USD</option>
+                                <option class="bg-gray-900 text-white">$10,000+ USD</option>
+                                <option class="bg-gray-900 text-white">
+                                    Full-time Senior Engineering Compensation
+                                </option>
+                            </select>
+
+                            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-white pointer-events-none">
+                                ↓
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div>
+
+                        <label class="text-gold
+                                  text-[10px]
+                                  tracking-[0.2em]">
+
+                            MESSAGE
+
+                        </label>
+
+                        <textarea required rows="5" class="input"
+                            placeholder="Tell me about your project..."></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="gold-btn">
+
+                        SEND MESSAGE ↗
+
+                    </button>
+
+
+                    <p id="formMessage" class="text-gold hidden">
+
+                        Thank you! Your message
+                        has been submitted.
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+    <footer class="border-t
+               border-white/10
+               py-10 px-5 md:px-8">
+
+        <div class="max-w-7xl mx-auto
+                flex flex-col md:flex-row
+                justify-between gap-5">
+
+            <div>
+
+                <p class="font-bold
+                      tracking-[0.15em]">
+
+                    AYUSH SHARMA<span class="text-gold">.</span>
+
+                </p>
+
+                <p class="text-gray-500
+                      text-xs tracking-[0.2em]
+                      mt-2">
+
+                    WEB DEVELOPER
+
+                </p>
+
+            </div>
+
+
+            <p class="text-gray-500 text-xs">
+
+                © 2026 AYUSH SHARMA —
+                ALL RIGHTS RESERVED.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+     PROJECT MODAL
+========================================================= -->
+
+    <div id="projectModal" class="fixed inset-0 z-[100]
+            hidden items-center justify-center
+            p-5 modal">
+
+        <div class="bg-charcoal
+                border border-white/10
+                max-w-3xl w-full
+                max-h-[90vh]
+                overflow-y-auto
+                p-8 md:p-12
+                relative">
+
+
+            <button onclick="closeProject()" class="absolute top-5 right-5
+                       w-10 h-10
+                       border border-white/20
+                       text-xl">
+
+                ×
+
+            </button>
+
+
+            <p id="modalCategory" class="text-gold text-xs
+                  tracking-[0.2em]">
+
+            </p>
+
+
+            <h2 id="modalTitle" class="font-serif
+                   text-5xl md:text-7xl
+                   mt-4">
+
+            </h2>
+
+
+            <p id="modalDescription" class="text-white/55
+                  leading-8 mt-7">
+
+            </p>
+
+
+            <p class="text-gold
+                  text-xs tracking-[0.2em]
+                  mt-8">
+
+                TECHNOLOGY
+
+            </p>
+
+
+            <p id="modalTech" class="mt-3 text-white/70">
+
+            </p>
+
+
+            <p class="text-gold
+                  text-xs tracking-[0.2em]
+                  mt-8">
+
+                KEY FEATURES
+
+            </p>
+
+
+            <ul id="modalFeatures" class="grid sm:grid-cols-2
+                   gap-3 mt-4
+                   text-white/60">
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+     RESUME MODAL
+========================================================= -->
+
+    <div id="resumeModal" class="fixed inset-0 z-[100]
+            hidden items-center justify-center
+            p-5 modal bg-black text-white">
+
+        <div class="bg-cream text-dark
+                max-w-3xl w-full
+                max-h-[90vh]
+                overflow-y-auto
+                p-8 md:p-12
+                relative">
+
+
+            <button onclick="closeResume()" class="absolute top-5 right-5
+                       w-10 h-10
+                       border border-black/20
+                       text-xl">
+
+                ×
+
+            </button>
+
+
+            <p class="text-xs tracking-[0.2em]">
+                RESUME / 2026
+            </p>
+
+
+            <h2 class="font-serif
+                   text-6xl mt-3">
+
+                Ayush Sharma
+
+            </h2>
+
+
+            <p class="text-gold mt-2">
+                WEB DEVELOPER
+            </p>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-7 mt-12">
+
+
+                <div class="border-t
+                        border-black/20
+                        pt-4">
+
+                    <p class="text-xs text-gold">
+                        SUMMARY
+                    </p>
+
+                    <p class="mt-3 text-black/70">
+                        Web Developer focused on
+                        responsive frontend
+                        development, clean
+                        interfaces and practical
+                        JavaScript interactions.
+                    </p>
+
+                </div>
+
+
+                <div class="border-t
+                        border-black/20
+                        pt-4">
+
+                    <p class="text-xs text-gold">
+                        EDUCATION
+                    </p>
+
+                    <p class="mt-3 text-black/70">
+                        BSc — Mathematics<br>
+                        Chhatrapati Shivaji Maharaj,
+                        Kanpur
+                    </p>
+
+                </div>
+
+
+                <div class="border-t
+                        border-black/20
+                        pt-4">
+
+                    <p class="text-xs text-gold">
+                        TECHNICAL SKILLS
+                    </p>
+
+                    <p class="mt-3 text-black/70">
+                        HTML5 · CSS3 · JavaScript ·
+                        Tailwind CSS · Responsive
+                        Design · Git · GitHub
+                    </p>
+
+                </div>
+
+
+                <div class="border-t
+                        border-black/20
+                        pt-4">
+
+                    <p class="text-xs text-gold">
+                        EXPERIENCE
+                    </p>
+
+                    <p class="mt-3 text-black/70">
+                        Web Development Intern —
+                        responsive layouts, UI fixes,
+                        debugging and frontend
+                        implementation.
+                    </p>
+
+                </div>
+
+
+                <div class="border-t
+                        border-black/20
+                        pt-4">
+
+                    <p class="text-xs text-gold">
+                        PROJECTS
+                    </p>
+
+                    <p class="mt-3 text-black/70">
+                        The Aurelia · Kataria Jewels
+                        · XEV Automotive
+                    </p>
+
+                </div>
+
+
+                <div class="border-t
+                        border-black/20
+                        pt-4">
+
+                    <p class="text-xs text-gold">
+                        STRENGTHS
+                    </p>
+
+                    <p class="mt-3 text-black/70">
+                        Hardworking · Quick Learner
+                        · Problem Solving
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button onclick="downloadResume()" class="black-btn mt-10">
+
+                DOWNLOAD RESUME ↓
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+<script>
+    /* =========================================================
+   AYUSH SHARMA — PORTFOLIO JAVASCRIPT
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE LOADER
+   ========================================================= */
+
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    if (loader) {
+        loader.classList.add("hidden");
+    }
+});
+
+
+/* =========================================================
+   2. NAVBAR SCROLL EFFECT
+   ========================================================= */
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+    if (!navbar) return;
+
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+
+/* =========================================================
+   3. MOBILE MENU
+   ========================================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const closeMenuBtn = document.getElementById("closeMenu");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileLinks = document.querySelectorAll(".mobile-link");
+
+
+function openMobileMenu() {
+    if (!mobileMenu) return;
+
+    mobileMenu.classList.remove("translate-x-full");
+    document.body.classList.add("overflow-hidden");
+}
+
+
+function closeMobileMenu() {
+    if (!mobileMenu) return;
+
+    mobileMenu.classList.add("translate-x-full");
+    document.body.classList.remove("overflow-hidden");
+}
+
+
+if (menuBtn) {
+    menuBtn.addEventListener("click", openMobileMenu);
+}
+
+
+if (closeMenuBtn) {
+    closeMenuBtn.addEventListener("click", closeMobileMenu);
+}
+
+
+mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        closeMobileMenu();
+    });
+});
+
+
+/* =========================================================
+   4. ESC KEY
+   ========================================================= */
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape") {
+
+        closeMobileMenu();
+
+        if (typeof closeProject === "function") {
+            closeProject();
+        }
+
+        if (typeof closeResume === "function") {
+            closeResume();
+        }
+
+    }
+
+});
+
+
+/* =========================================================
+   5. SMOOTH SCROLL
+   ========================================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+
+    link.addEventListener("click", function (e) {
+
+        const targetId = this.getAttribute("href");
+
+        if (!targetId || targetId === "#") {
+            return;
+        }
+
+        const target = document.querySelector(targetId);
+
+        if (target) {
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   6. SCROLL REVEAL ANIMATION
+   ========================================================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+
+revealElements.forEach((element) => {
+    revealObserver.observe(element);
+});
+
+
+/* =========================================================
+   7. PROJECT DATA
+   ========================================================= */
+
+const projects = {
+
+    aurelia: {
+
+        title: "The Aurelia",
+
+        category: "Luxury Hotel & Resort",
+
+        description:
+            "A premium luxury hotel website focused on elegant presentation, responsive design and interactive booking experiences.",
+
+        technologies:
+            "HTML • CSS • JavaScript • Tailwind CSS",
+
+        features: [
+
+            "Responsive luxury hotel layout",
+
+            "Luxury rooms and suites presentation",
+
+            "Interactive booking experience",
+
+            "Gallery and facilities sections",
+
+            "Responsive navigation",
+
+            "Premium cinematic UI"
+
+        ]
+
+    },
+
+
+    jewels: {
+
+        title: "Kataria Jewels",
+
+        category: "Luxury Jewellery",
+
+        description:
+            "A premium jewellery experience designed with cinematic visuals, elegant typography and a luxury-focused interface.",
+
+        technologies:
+            "HTML • Tailwind CSS • JavaScript",
+
+        features: [
+
+            "Luxury visual presentation",
+
+            "Elegant typography system",
+
+            "Premium jewellery sections",
+
+            "Responsive product layout",
+
+            "Luxury navigation experience",
+
+            "Premium UI interactions"
+
+        ]
+
+    },
+
+
+    xev: {
+
+        title: "XEV 9S",
+
+        category: "Automotive Landing Page",
+
+        description:
+            "A modern automotive landing experience with cinematic visuals, responsive layouts and premium interaction design.",
+
+        technologies:
+            "HTML • CSS • JavaScript • Tailwind CSS",
+
+        features: [
+
+            "Cinematic automotive layout",
+
+            "Responsive navigation",
+
+            "Product-focused sections",
+
+            "Modern hero presentation",
+
+            "Responsive design",
+
+            "Premium interaction design"
+
+        ]
+
+    }
+
+};
+
+
+/* =========================================================
+   8. PROJECT MODAL
+   ========================================================= */
+
+const projectModal = document.getElementById("projectModal");
+
+const modalCategory = document.getElementById("modalCategory");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalTech = document.getElementById("modalTech");
+const modalFeatures = document.getElementById("modalFeatures");
+
+
+function openProject(projectKey) {
+
+    const project = projects[projectKey];
+
+    if (!project || !projectModal) {
+        return;
+    }
+
+
+    if (modalCategory) {
+        modalCategory.textContent = project.category;
+    }
+
+
+    if (modalTitle) {
+        modalTitle.textContent = project.title;
+    }
+
+
+    if (modalDescription) {
+        modalDescription.textContent = project.description;
+    }
+
+
+    if (modalTech) {
+        modalTech.textContent = project.technologies;
+    }
+
+
+    if (modalFeatures) {
+
+        modalFeatures.innerHTML = "";
+
+        project.features.forEach((feature) => {
+
+            const li = document.createElement("li");
+
+            li.textContent = feature;
+
+            li.className =
+                "flex items-start gap-3 mb-3";
+
+            li.innerHTML = `
+                <span class="text-[#c9a45c] mt-1">✦</span>
+                <span>${feature}</span>
+            `;
+
+            modalFeatures.appendChild(li);
+
+        });
+
+    }
+
+
+    projectModal.classList.remove("hidden");
+
+    projectModal.classList.add("flex");
+
+    document.body.classList.add("overflow-hidden");
+
+}
+
+
+function closeProject() {
+
+    if (!projectModal) {
+        return;
+    }
+
+    projectModal.classList.add("hidden");
+
+    projectModal.classList.remove("flex");
+
+    document.body.classList.remove("overflow-hidden");
+
+}
+
+
+/* =========================================================
+   9. CLOSE PROJECT MODAL WHEN CLICKING OUTSIDE
+   ========================================================= */
+
+if (projectModal) {
+
+    projectModal.addEventListener("click", (e) => {
+
+        if (e.target === projectModal) {
+            closeProject();
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   10. RESUME MODAL
+   ========================================================= */
+
+const resumeModal = document.getElementById("resumeModal");
+
+
+function openResume() {
+
+    if (!resumeModal) {
+        return;
+    }
+
+    resumeModal.classList.remove("hidden");
+
+    resumeModal.classList.add("flex");
+
+    document.body.classList.add("overflow-hidden");
+
+}
+
+
+function closeResume() {
+
+    if (!resumeModal) {
+        return;
+    }
+
+    resumeModal.classList.add("hidden");
+
+    resumeModal.classList.remove("flex");
+
+    document.body.classList.remove("overflow-hidden");
+
+}
+
+
+function downloadResume() {
+
+    const resumePath = "/assets/Ayush-Sharma-Resume.pdf";
+
+    const link = document.createElement("a");
+
+    link.href = resumePath;
+
+    link.download = "Ayush-Sharma-Resume.pdf";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+
+}
+
+
+/* =========================================================
+   11. CLOSE RESUME MODAL OUTSIDE
+   ========================================================= */
+
+if (resumeModal) {
+
+    resumeModal.addEventListener("click", (e) => {
+
+        if (e.target === resumeModal) {
+            closeResume();
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   12. CONTACT FORM → WHATSAPP
+   ========================================================= */
+
+const contactForm = document.getElementById("contactForm");
+
+const formMessage = document.getElementById("formMessage");
+
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+
+        /* -----------------------------
+           GET FORM VALUES
+        ----------------------------- */
+
+        const nameInput =
+            contactForm.querySelector('input[type="text"]');
+
+        const emailInput =
+            contactForm.querySelector('input[type="email"]');
+
+        const projectType =
+            document.getElementById("projectType");
+
+        const budgetRange =
+            document.getElementById("budgetRange");
+
+        const textarea =
+            contactForm.querySelector("textarea");
+
+
+        const name =
+            nameInput
+                ? nameInput.value.trim()
+                : "";
+
+
+        const email =
+            emailInput
+                ? emailInput.value.trim()
+                : "";
+
+
+        const project =
+            projectType
+                ? projectType.value
+                : "";
+
+
+        const budget =
+            budgetRange
+                ? budgetRange.value
+                : "";
+
+
+        const message =
+            textarea
+                ? textarea.value.trim()
+                : "";
+
+
+        /* -----------------------------
+           VALIDATION
+        ----------------------------- */
+
+        if (!name || !email || !message) {
+
+            if (formMessage) {
+
+                formMessage.textContent =
+                    "Please fill all required fields.";
+
+                formMessage.classList.remove("hidden");
+
+            }
+
+            return;
+
+        }
+
+
+        /* -----------------------------
+           AYUSH WHATSAPP NUMBER
+        ----------------------------- */
+
+        const whatsappNumber =
+            "916397165594";
+
+
+        /* -----------------------------
+           WHATSAPP MESSAGE
+        ----------------------------- */
+
+        const whatsappMessage =
+`Hello Ayush 👋
+
+I want to discuss a website project with you.
+
+━━━━━━━━━━━━━━━━━━━━
+
+👤 Name:
+${name}
+
+📧 Email:
+${email}
+
+💻 Project:
+${project || "Not specified"}
+
+💰 Budget:
+${budget || "Not specified"}
+
+📝 Message:
+${message}
+
+━━━━━━━━━━━━━━━━━━━━
+
+Sent from Ayush Sharma Portfolio`;
+
+
+        /* -----------------------------
+           WHATSAPP URL
+        ----------------------------- */
+
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(whatsappMessage);
+
+
+        /* -----------------------------
+           OPEN WHATSAPP
+        ----------------------------- */
+
+        window.location.href = whatsappURL;
+
+
+        /* -----------------------------
+           RESET FORM
+        ----------------------------- */
+
+        setTimeout(() => {
+
+            contactForm.reset();
+
+        }, 100);
+
+
+    });
+
+}
+
+
+/* =========================================================
+   13. CURRENT YEAR
+   ========================================================= */
+
+const yearElements =
+    document.querySelectorAll("[data-year]");
+
+
+yearElements.forEach((element) => {
+
+    element.textContent =
+        new Date().getFullYear();
+
+});
+
+
+/* =========================================================
+   14. IMAGE LAZY LOADING
+   ========================================================= */
+
+document.querySelectorAll("img").forEach((image) => {
+
+    if (!image.hasAttribute("loading")) {
+
+        image.setAttribute(
+            "loading",
+            "lazy"
+        );
+
+    }
+
+});
+
+
+/* =========================================================
+   15. PREVENT BROKEN IMAGE LAYOUT
+   ========================================================= */
+
+document.querySelectorAll("img").forEach((image) => {
+
+    image.addEventListener("error", () => {
+
+        image.style.opacity = "0.4";
+
+    });
+
+});
+
+
+/* =========================================================
+   16. CONSOLE MESSAGE
+   ========================================================= */
+
+console.log(
+    "%cAyush Sharma — Web Developer",
+    "font-size:18px;font-weight:bold;"
+);
+
+console.log(
+    "%cPortfolio loaded successfully.",
+    "font-size:13px;"
+);
+</script>
+
+</body>
+
+</html>

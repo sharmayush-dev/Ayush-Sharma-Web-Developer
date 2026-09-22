@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skills — Ayush Sharma</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: "#B08D57",
+                        softgold: "#D6C19A"
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        serif: ["Georgia", "serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, sans-serif;
+        }
+
+        .serif {
+            font-family: Georgia, serif;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all .7s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-line {
+            background: linear-gradient(90deg,
+                    transparent,
+                    #B08D57,
+                    transparent);
+        }
+
+        .luxury-card {
+            transition: all .4s ease;
+        }
+
+        .luxury-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, .08);
+            border-color: #B08D57;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fcfcfb] text-[#171717]">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50
+               bg-white/90 backdrop-blur-xl
+               border-b border-gray-100">
+
+        <nav class="max-w-7xl mx-auto px-6 lg:px-10 py-5
+                flex items-center justify-between">
+
+            <a href="index.html" class="group">
+
+                <h1 class="serif text-xl tracking-[.18em] font-bold">
+                    AYUSH SHARMA
+                    <span class="text-gold">.</span>
+                </h1>
+
+                <p class="text-[8px] tracking-[.35em] text-gray-400 mt-1">
+                    WEB DEVELOPER
+                </p>
+
+            </a>
+
+
+            <!-- Desktop -->
+
+            <div class="hidden md:flex items-center gap-9
+                    text-[12px] tracking-widest font-semibold gap-9">
+
+                <a href="contact.html" class="hover:text-gold transition text-[17px] tracking-widest font-semibold">
+                    Hello Sir 
+                </a>
+
+            </div>
+
+
+            <!-- Mobile -->
+
+            <button id="menuBtn" class="md:hidden text-3xl mr-5">
+                ☰
+            </button>
+
+        </nav>
+
+
+        <!-- Mobile Menu -->
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white
+                border-t border-gray-100">
+
+            <div class="px-6 py-6 flex flex-col gap-5
+                    text-2xs tracking-widest uppercase">
+
+                <a href="index.html">Home</a>
+                <a href="index3.html">About</a>
+                <a href="index4.html">Skills</a>
+                <a href="index5.html">Work</a>
+                <a href="index6.html">Experience</a>
+                <a href="index7.html">Contact</a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+
+    <section class="pt-36 pb-24 px-6">
+
+        <div class="max-w-7xl mx-auto
+                grid lg:grid-cols-2
+                items-center gap-14 lg:gap-20">
+
+            <!-- LEFT CONTENT -->
+
+            <div>
+
+                <div class="flex items-center gap-4 mb-6">
+
+                    <span class="w-12 h-[1px] bg-gold"></span>
+
+                    <p class="text-[11px] tracking-[.35em]
+                          uppercase text-gold font-semibold">
+                        Expertise
+                    </p>
+
+                </div>
+
+
+                <h1 class="serif text-5xl md:text-7xl
+                       lg:text-8xl leading-[.95]
+                       font-medium">
+
+                    My
+                    <span class="italic text-gray-400">
+                        Skills.
+                    </span>
+
+                </h1>
+
+
+                <p class="mt-8 max-w-xl
+                      text-gray-500 leading-8
+                      text-sm md:text-base">
+
+                    A collection of technologies and development
+                    skills I use to create clean, responsive and
+                    modern digital experiences.
+
+                </p>
+
+
+                <!-- Small Info -->
+
+                <div class="flex flex-wrap gap-8 mt-10">
+
+                    <div>
+
+                        <p class="text-2xl serif">
+                            06+
+                        </p>
+
+                        <p class="text-[10px] tracking-widest
+                              uppercase text-gray-400 mt-1">
+                            Core Skills
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="text-2xl serif">
+                            20+
+                        </p>
+
+                        <p class="text-[10px] tracking-widest
+                              uppercase text-gray-400 mt-1">
+                            Projects
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="text-2xl serif">
+                            2026
+                        </p>
+
+                        <p class="text-[10px] tracking-widest
+                              uppercase text-gray-400 mt-1">
+                            Focus
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT IMAGE -->
+
+            <div class="relative">
+
+                <!-- Gold decorative line -->
+
+                <div class="absolute
+                        -top-5 -right-5
+                        w-24 h-24
+                        border-t border-r
+                        border-[#B08D57]
+                        hidden md:block">
+                </div>
+
+
+                <!-- Image -->
+
+                <div class="relative
+                        overflow-hidden
+                        bg-gray-100
+                        border border-gray-200
+                        p-2">
+
+                    <img src="/assets/about1.png"
+                        alt="Web Development Workspace" class="w-full h-[420px] md:h-[520px]
+                           object-cover
+                           grayscale-[15%]
+                           hover:scale-105
+                           transition duration-700">
+
+                </div>
+
+
+                <!-- Floating Label -->
+
+                <div class="absolute
+                        bottom-5 left-5
+                        bg-white
+                        border border-gray-200
+                        px-5 py-4
+                        shadow-xl">
+
+                    <p class="text-[9px]
+                          tracking-[.25em]
+                          uppercase
+                          text-gray-400">
+                        Currently
+                    </p>
+
+                    <p class="serif text-lg mt-1">
+                        Building Digital
+                        Experiences
+                    </p>
+
+                </div>
+
+
+                <!-- Small Gold Dot -->
+
+                <div class="absolute
+                        -bottom-4
+                        -right-4
+                        w-10 h-10
+                        rounded-full
+                        bg-[#B08D57]
+                        border-4
+                        border-[#fcfcfb]">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= GOLD LINE ================= -->
+
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="h-[1px] gold-line"></div>
+    </div>
+
+
+
+    <!-- ================= CORE SKILLS ================= -->
+
+    <section class="py-24 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="mb-12">
+
+                <p class="text-[10px] tracking-[.3em]
+                      uppercase text-gray-400">
+                    01 / Core Skills
+                </p>
+
+                <h2 class="serif text-4xl mt-3">
+                    Technical Expertise
+                </h2>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+
+                <!-- HTML -->
+
+                <div class="luxury-card reveal
+                        bg-white border border-gray-200
+                        p-8 md:p-10">
+
+                    <div class="flex justify-between items-start">
+
+                        <div>
+
+                            <span class="text-xs text-gold">
+                                01
+                            </span>
+
+                            <h3 class="serif text-2xl mt-3">
+                                HTML5
+                            </h3>
+
+                        </div>
+
+                        <span class="text-sm text-gray-400">
+                            90%
+                        </span>
+
+                    </div>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-5">
+                        Semantic structure, clean markup and
+                        accessible website architecture.
+                    </p>
+
+                    <div class="mt-7 h-[2px] bg-gray-100">
+
+                        <div class="h-full bg-gold" style="width:90%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CSS -->
+
+                <div class="luxury-card reveal
+                        bg-white border border-gray-200
+                        p-8 md:p-10">
+
+                    <div class="flex justify-between items-start">
+
+                        <div>
+
+                            <span class="text-xs text-gold">
+                                02
+                            </span>
+
+                            <h3 class="serif text-2xl mt-3">
+                                CSS3
+                            </h3>
+
+                        </div>
+
+                        <span class="text-sm text-gray-400">
+                            88%
+                        </span>
+
+                    </div>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-5">
+                        Modern layouts, visual styling,
+                        transitions and responsive interfaces.
+                    </p>
+
+                    <div class="mt-7 h-[2px] bg-gray-100">
+
+                        <div class="h-full bg-gold" style="width:88%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JAVASCRIPT -->
+
+                <div class="luxury-card reveal
+                        bg-white border border-gray-200
+                        p-8 md:p-10">
+
+                    <div class="flex justify-between items-start">
+
+                        <div>
+
+                            <span class="text-xs text-gold">
+                                03
+                            </span>
+
+                            <h3 class="serif text-2xl mt-3">
+                                JavaScript
+                            </h3>
+
+                        </div>
+
+                        <span class="text-sm text-gray-400">
+                            75%
+                        </span>
+
+                    </div>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-5">
+                        Interactive components, DOM manipulation
+                        and practical website functionality.
+                    </p>
+
+                    <div class="mt-7 h-[2px] bg-gray-100">
+
+                        <div class="h-full bg-gold" style="width:75%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TAILWIND -->
+
+                <div class="luxury-card reveal
+                        bg-white border border-gray-200
+                        p-8 md:p-10">
+
+                    <div class="flex justify-between items-start">
+
+                        <div>
+
+                            <span class="text-xs text-gold">
+                                04
+                            </span>
+
+                            <h3 class="serif text-2xl mt-3">
+                                Tailwind CSS
+                            </h3>
+
+                        </div>
+
+                        <span class="text-sm text-gray-400">
+                            85%
+                        </span>
+
+                    </div>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-5">
+                        Fast, responsive and consistent interface
+                        development using utility classes.
+                    </p>
+
+                    <div class="mt-7 h-[2px] bg-gray-100">
+
+                        <div class="h-full bg-gold" style="width:85%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RESPONSIVE -->
+
+                <div class="luxury-card reveal
+                        bg-white border border-gray-200
+                        p-8 md:p-10">
+
+                    <div class="flex justify-between items-start">
+
+                        <div>
+
+                            <span class="text-xs text-gold">
+                                05
+                            </span>
+
+                            <h3 class="serif text-2xl mt-3">
+                                Responsive Design
+                            </h3>
+
+                        </div>
+
+                        <span class="text-sm text-gray-400">
+                            90%
+                        </span>
+
+                    </div>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-5">
+                        Mobile-first layouts that work smoothly
+                        across phones, tablets and desktops.
+                    </p>
+
+                    <div class="mt-7 h-[2px] bg-gray-100">
+
+                        <div class="h-full bg-gold" style="width:90%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GITHUB -->
+
+                <div class="luxury-card reveal
+                        bg-white border border-gray-200
+                        p-8 md:p-10">
+
+                    <div class="flex justify-between items-start">
+
+                        <div>
+
+                            <span class="text-xs text-gold">
+                                06
+                            </span>
+
+                            <h3 class="serif text-2xl mt-3">
+                                Git & GitHub
+                            </h3>
+
+                        </div>
+
+                        <span class="text-sm text-gray-400">
+                            70%
+                        </span>
+
+                    </div>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-5">
+                        Version control, project management and
+                        maintaining development workflow.
+                    </p>
+
+                    <div class="mt-7 h-[2px] bg-gray-100">
+
+                        <div class="h-full bg-gold" style="width:70%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= TOOLKIT ================= -->
+
+    <section class="py-24 px-6 bg-[#f7f6f3]">
+
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-[10px] tracking-[.3em]
+                  uppercase text-gray-400">
+                02 / Toolkit
+            </p>
+
+            <h2 class="serif text-4xl mt-3">
+                Technologies I Work With
+            </h2>
+
+
+            <div class="grid grid-cols-2 md:grid-cols-5
+                    gap-px bg-gray-200 mt-12">
+
+                <div class="bg-white p-8 text-center">
+                    <p class="serif text-xl">HTML</p>
+                    <span class="text-[10px] text-gray-400">
+                        STRUCTURE
+                    </span>
+                </div>
+
+                <div class="bg-white p-8 text-center">
+                    <p class="serif text-xl">CSS</p>
+                    <span class="text-[10px] text-gray-400">
+                        DESIGN
+                    </span>
+                </div>
+
+                <div class="bg-white p-8 text-center">
+                    <p class="serif text-xl">JS</p>
+                    <span class="text-[10px] text-gray-400">
+                        LOGIC
+                    </span>
+                </div>
+
+                <div class="bg-white p-8 text-center">
+                    <p class="serif text-xl">Tailwind</p>
+                    <span class="text-[10px] text-gray-400">
+                        UI
+                    </span>
+                </div>
+
+                <div class="bg-white p-8 text-center">
+                    <p class="serif text-xl">Git</p>
+                    <span class="text-[10px] text-gray-400">
+                        VERSION
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= STRENGTHS ================= -->
+
+    <section class="py-24 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="mb-12">
+
+                <p class="text-[10px] tracking-[.3em]
+                      uppercase text-gray-400">
+                    03 / Strengths
+                </p>
+
+                <h2 class="serif text-4xl mt-3">
+                    Beyond The Code
+                </h2>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="luxury-card border border-gray-200
+                        bg-white p-9">
+
+                    <span class="text-gold text-xs">
+                        01
+                    </span>
+
+                    <h3 class="serif text-2xl mt-5">
+                        Hardworking
+                    </h3>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-4">
+                        Consistent with my work and committed
+                        to completing tasks properly.
+                    </p>
+
+                </div>
+
+
+                <div class="luxury-card border border-gray-200
+                        bg-white p-9">
+
+                    <span class="text-gold text-xs">
+                        02
+                    </span>
+
+                    <h3 class="serif text-2xl mt-5">
+                        Quick Learner
+                    </h3>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-4">
+                        Comfortable learning new tools,
+                        technologies and development techniques.
+                    </p>
+
+                </div>
+
+
+                <div class="luxury-card border border-gray-200
+                        bg-white p-9">
+
+                    <span class="text-gold text-xs">
+                        03
+                    </span>
+
+                    <h3 class="serif text-2xl mt-5">
+                        Problem Solver
+                    </h3>
+
+                    <p class="text-sm text-gray-500
+                          leading-7 mt-4">
+                        I enjoy identifying issues and finding
+                        practical solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="px-6 py-28 bg-[#171717] text-white">
+
+        <div class="max-w-5xl mx-auto text-center">
+
+            <p class="text-[10px] tracking-[.35em]
+                  uppercase text-[#B08D57]">
+                Let's Build Something
+            </p>
+
+            <h2 class="serif text-5xl md:text-7xl
+                   mt-5 font-normal">
+
+                Turning Skills
+                <br>
+                Into Experiences.
+
+            </h2>
+
+            <p class="text-gray-400 max-w-xl mx-auto
+                  mt-7 leading-7 text-sm">
+
+                I am continuously learning, building and
+                improving to create better digital experiences.
+
+            </p>
+
+            <a href="index7.html" class="inline-flex mt-10
+                  border border-[#B08D57]
+                  px-8 py-4
+                  text-xs tracking-[.2em] uppercase
+                  hover:bg-[#B08D57]
+                  hover:text-white
+                  transition">
+
+                Get In Touch
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-white border-t border-gray-200">
+
+        <div class="max-w-7xl mx-auto px-6 py-8
+                flex flex-col md:flex-row
+                justify-between items-center gap-4">
+
+            <div>
+
+                <h3 class="serif text-lg">
+                    AYUSH SHARMA<span class="text-gold">.</span>
+                </h3>
+
+            </div>
+
+            <p class="text-[11px] text-gray-400
+                  tracking-widest uppercase">
+
+                © 2026 Ayush Sharma
+
+            </p>
+
+            <p class="text-[11px] text-gray-400
+                  tracking-widest uppercase">
+
+                Web Developer
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= JS ================= -->
+
+    <script>
+
+        // Mobile Menu
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", () => {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+        // Navbar Shadow
+
+        const navbar =
+            document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 30) {
+
+                navbar.classList.add("shadow-sm");
+
+            } else {
+
+                navbar.classList.remove("shadow-sm");
+
+            }
+
+        });
+
+
+        // Reveal Animation
+
+        const reveals =
+            document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+
+            reveals.forEach((item) => {
+
+                const top =
+                    item.getBoundingClientRect().top;
+
+                if (top < window.innerHeight - 80) {
+
+                    item.classList.add("active");
+
+                }
+
+            });
+
+        }
+
+        window.addEventListener(
+            "scroll",
+            revealOnScroll
+        );
+
+        revealOnScroll();
+
+    </script>
+
+</body>
+
+</html>

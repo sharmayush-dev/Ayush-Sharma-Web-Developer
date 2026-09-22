@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Ayush Sharma — Web Developer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: "#B08D57",
+                        dark: "#111111",
+                        cream: "#F8F7F4"
+                    },
+                    fontFamily: {
+                        luxury: ["Cormorant Garamond", "serif"],
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        .font-luxury {
+            font-family: "Cormorant Garamond", serif;
+        }
+
+        /* NAV LINKS */
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: #B08D57;
+            left: 0;
+            bottom: -6px;
+            transition: 0.4s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* GOLD TEXT */
+
+        .gold-text {
+            color: #B08D57;
+        }
+
+        /* CONTACT CARD */
+
+        .contact-card {
+            transition: all 0.4s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        /* INPUT */
+
+        .input-box {
+            transition: all 0.3s ease;
+        }
+
+        .input-box:focus {
+            border-color: #B08D57;
+            box-shadow: 0 8px 25px rgba(176, 141, 87, 0.08);
+        }
+
+        /* SOCIAL */
+
+        .social-icon {
+            transition: all 0.35s ease;
+        }
+
+        .social-icon:hover {
+            color: #B08D57;
+            transform: translateY(-5px);
+        }
+
+        /* BUTTON */
+
+        .luxury-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-btn::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: #B08D57;
+            transition: 0.4s ease;
+            z-index: 0;
+        }
+
+        .luxury-btn:hover::before {
+            width: 100%;
+        }
+
+        .luxury-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* GOLD LINE */
+
+        .gold-line {
+            width: 55px;
+            height: 1px;
+            background: #B08D57;
+        }
+
+        /* MOBILE MENU */
+
+        #mobileMenu {
+            transition: transform 0.45s ease;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header id="navbar"
+        class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+
+        <nav class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="group">
+
+                <h1 class="font-luxury text-2xl font-semibold tracking-[3px]">
+                    AYUSH
+                    <span class="gold-text">SHARMA</span>
+                </h1>
+
+                <p class="text-[8px] tracking-[5px] text-gray-500 mt-[-2px]">
+                    WEB DEVELOPER
+                </p>
+
+            </a>
+
+
+            <!-- DESKTOP NAV -->
+
+            <div class="hidden md:flex items-center gap-9">
+
+                <a href="contact.html" class="nav-link text-[18px] tracking-wide text-black font-semibold">
+                    Hello Sir
+                </a>
+
+            </div>
+
+
+            <!-- MENU BUTTON -->
+
+            <button id="menuBtn" class="md:hidden text-3xl text-gray-900 mr-5">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-[60] translate-x-full flex flex-col">
+
+        <div class="flex justify-between items-center px-6 py-6 border-b">
+
+            <h2 class="font-luxury text-2xl tracking-[3px]">
+                AYUSH
+                <span class="gold-text">SHARMA</span>
+            </h2>
+
+            <button id="closeMenu" class="text-2xl text-gray-900">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="flex flex-col flex-1 gap-6 ml-6">
+
+            <a href="index.html" class="mobileLink font-luxury text-3xl hover:text-gold transition">
+                Home
+            </a>
+
+            <a href="index3.html" class="mobileLink font-luxury text-3xl hover:text-gold transition">
+                About
+            </a>
+
+            <a href="index4.html" class="mobileLink font-luxury text-3xl hover:text-gold transition">
+                Skills
+            </a>
+
+            <a href="index5.html" class="mobileLink font-luxury text-3xl hover:text-gold transition">
+                Work
+            </a>
+
+            <a href="index6.html" class="mobileLink font-luxury text-3xl hover:text-gold transition">
+                Experience
+            </a>
+
+            <a href="index7.html" class="mobileLink font-luxury text-3xl gold-text">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="pt-40 pb-24 px-6 bg-white">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="flex items-center gap-4 mb-7">
+
+                <div class="gold-line"></div>
+
+                <p class="uppercase tracking-[5px] text-xs text-gold font-semibold">
+                    Let's Connect
+                </p>
+
+            </div>
+
+
+            <h1 class="font-luxury text-6xl md:text-8xl lg:text-9xl leading-none font-medium">
+
+                Get In
+                <span class="gold-text italic">
+                    Touch.
+                </span>
+
+            </h1>
+
+
+            <p class="max-w-2xl text-gray-500 mt-8 text-sm md:text-base leading-8">
+
+                Have a project in mind, a job opportunity, or simply want to
+                connect? I would love to hear from you and discuss how we can
+                create something meaningful together.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="px-6 pb-28 bg-white">
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24">
+
+
+            <!-- LEFT -->
+
+            <div>
+
+                <p class="uppercase tracking-[4px] text-xs text-gold font-semibold mb-5">
+                    Contact Information
+                </p>
+
+
+                <h2 class="font-luxury text-5xl md:text-6xl leading-tight">
+                    Let's create
+                    <br>
+                    something
+                    <span class="gold-text italic">
+                        meaningful.
+                    </span>
+                </h2>
+
+
+                <p class="text-gray-500 leading-8 mt-7 max-w-lg">
+
+                    I am open to web development opportunities, internships,
+                    freelance projects and collaborations. If you have an idea,
+                    let's turn it into a modern digital experience.
+
+                </p>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-card mt-10 p-6 border border-gray-200 bg-white">
+
+                    <div class="flex items-start gap-5">
+
+                        <div class="w-12 h-12 border border-gold/30 flex items-center justify-center text-gold">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-[10px] uppercase tracking-[3px] text-gray-400">
+                                Email
+                            </p>
+
+                            <a href="mailto:yourmail@example.com"
+                                class="text-sm md:text-base font-medium mt-2 block hover:text-gold transition">
+
+                                sayush7922@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-card mt-4 p-6 border border-gray-200 bg-white">
+
+                    <div class="flex items-start gap-5">
+
+                        <div class="w-12 h-12 border border-gold/30 flex items-center justify-center text-gold">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-[10px] uppercase tracking-[3px] text-gray-400">
+                                Location
+                            </p>
+
+                            <p class="text-sm md:text-base font-medium mt-2">
+
+                                64, behind bcm hights, Sector A, Suman Nagar, Indore, Madhya Pradesh 452010, India
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AVAILABILITY -->
+
+                <div class="contact-card mt-4 p-6 border border-gray-200 bg-white">
+
+                    <div class="flex items-start gap-5">
+
+                        <div class="w-12 h-12 border border-gold/30 flex items-center justify-center text-gold">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-[10px] uppercase tracking-[3px] text-gray-400">
+                                Availability
+                            </p>
+
+                            <p class="text-sm md:text-base font-medium mt-2">
+                                Open to Opportunities
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SOCIAL -->
+
+                <!-- SOCIAL -->
+
+                <div class="mt-8 sm:mt-10">
+
+                    <p
+                        class="text-[9px] sm:text-[10px] uppercase tracking-[2.5px] sm:tracking-[3px] text-gray-400 mb-4 sm:mb-5">
+                        Follow Me
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6">
+
+                        <!-- GitHub -->
+                        <a href="#" aria-label="GitHub" class="social-icon w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12
+                   border border-gray-200
+                   flex items-center justify-center
+                   text-base sm:text-lg md:text-xl
+                   text-gray-700
+                   hover:border-gold hover:text-gold
+                   transition-all duration-300">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+
+                        <!-- LinkedIn -->
+                        <a href="#" aria-label="LinkedIn" class="social-icon w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12
+                   border border-gray-200
+                   flex items-center justify-center
+                   text-base sm:text-lg md:text-xl
+                   text-gray-700
+                   hover:border-gold hover:text-gold
+                   transition-all duration-300">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+
+                        <!-- Instagram -->
+                        <a href="#" aria-label="Instagram" class="social-icon w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12
+                   border border-gray-200
+                   flex items-center justify-center
+                   text-base sm:text-lg md:text-xl
+                   text-gray-700
+                   hover:border-gold hover:text-gold
+                   transition-all duration-300">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT FORM -->
+
+            <div>
+
+                <div class="border border-gray-200 p-7 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+
+                    <div class="mb-10">
+
+                        <p class="uppercase tracking-[4px] text-xs text-gold font-semibold mb-4">
+                            Send A Message
+                        </p>
+
+                        <h3 class="font-luxury text-4xl md:text-5xl">
+                            Tell me about your
+                            <span class="gold-text italic">
+                                project.
+                            </span>
+                        </h3>
+
+                    </div>
+
+
+                    <form id="contactForm">
+
+
+                        <!-- NAME -->
+
+                        <div class="mb-6">
+
+                            <label class="text-xs uppercase tracking-[2px] text-gray-500">
+                                Your Name
+                            </label>
+
+                            <input type="text" id="name" required placeholder="Enter your name"
+                                class="input-box w-full mt-3 px-0 py-4 border-0 border-b border-gray-300 outline-none text-sm placeholder:text-gray-400">
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="mb-6">
+
+                            <label class="text-xs uppercase tracking-[2px] text-gray-500">
+                                Email Address
+                            </label>
+
+                            <input type="email" id="email" required placeholder="Enter your email"
+                                class="input-box w-full mt-3 px-0 py-4 border-0 border-b border-gray-300 outline-none text-sm placeholder:text-gray-400">
+
+                        </div>
+
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="mb-6">
+
+                            <label class="text-xs uppercase tracking-[2px] text-gray-500">
+                                Subject
+                            </label>
+
+                            <input type="text" id="subject" required placeholder="What would you like to discuss?"
+                                class="input-box w-full mt-3 px-0 py-4 border-0 border-b border-gray-300 outline-none text-sm placeholder:text-gray-400">
+
+                        </div>
+
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="mb-8">
+
+                            <label class="text-xs uppercase tracking-[2px] text-gray-500">
+                                Message
+                            </label>
+
+                            <textarea id="message" rows="5" required placeholder="Write your message..."
+                                class="input-box w-full mt-3 px-0 py-4 border-0 border-b border-gray-300 outline-none text-sm resize-none placeholder:text-gray-400"></textarea>
+
+                        </div>
+
+
+
+                        <!-- BUTTON -->
+
+                        <button type="submit"
+                            class="luxury-btn w-full bg-black text-white py-4 text-xs uppercase tracking-[3px] font-semibold">
+
+                            <span class="flex items-center justify-center gap-3">
+
+                                Send Message
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </span>
+
+                        </button>
+
+
+                        <!-- SUCCESS -->
+
+                        <div id="successMessage"
+                            class="hidden mt-5 p-4 bg-green-50 border border-green-200 text-green-700 text-sm text-center">
+
+                            <i class="fa-solid fa-circle-check mr-2"></i>
+
+                            Thank you! Your message has been received.
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= QUOTE SECTION ================= -->
+
+    <section class="px-6 py-28 bg-[#F8F7F4]">
+
+        <div class="max-w-5xl mx-auto text-center">
+
+            <p class="text-gold text-3xl mb-8">
+                “
+            </p>
+
+            <h2 class="font-luxury text-4xl md:text-6xl leading-tight">
+
+                Great digital experiences begin
+                <br class="hidden md:block">
+
+                with a
+                <span class="gold-text italic">
+                    simple conversation.
+                </span>
+
+            </h2>
+
+            <div class="w-12 h-px bg-gold mx-auto mt-10"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="px-6 py-24 bg-black text-white">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <p class="uppercase tracking-[5px] text-xs text-gold mb-6">
+                Start A Conversation
+            </p>
+
+            <h2 class="font-luxury text-5xl md:text-7xl">
+                Let's Work
+                <span class="gold-text italic">
+                    Together.
+                </span>
+            </h2>
+
+            <p class="text-gray-400 max-w-xl mx-auto mt-6 leading-7 text-sm">
+                Whether you have a project, opportunity or idea,
+                feel free to reach out.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-white border-t border-gray-200 px-6 pt-20 pb-8">
+
+        <div class="max-w-7xl mx-auto">
+
+
+            <div class="grid md:grid-cols-3 gap-12 pb-16">
+
+
+                <!-- BRAND -->
+
+                <div>
+
+                    <h2 class="font-luxury text-3xl tracking-[3px]">
+                        AYUSH
+                        <span class="gold-text">
+                            SHARMA
+                        </span>
+                    </h2>
+
+                    <p class="uppercase text-[9px] tracking-[4px] text-gray-400 mt-2">
+                        Web Developer
+                    </p>
+
+                    <p class="text-sm text-gray-500 leading-7 mt-6 max-w-sm">
+
+                        Building modern, responsive and meaningful
+                        digital experiences with clean code and thoughtful design.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- NAVIGATION -->
+
+                <div>
+
+                    <h3 class="uppercase tracking-[3px] text-xs font-semibold mb-6">
+                        Navigation
+                    </h3>
+
+                    <div class="flex flex-col gap-3 text-sm text-gray-500">
+
+                        <a href="index.html" class="hover:text-gold transition">
+                            Home
+                        </a>
+
+                        <a href="index3.html" class="hover:text-gold transition">
+                            About
+                        </a>
+
+                        <a href="index4.html" class="hover:text-gold transition">
+                            Skills
+                        </a>
+
+                        <a href="index5.html" class="hover:text-gold transition">
+                            Work
+                        </a>
+
+                        <a href="index6.html" class="hover:text-gold transition">
+                            Experience
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SERVICES -->
+
+                <div>
+
+                    <h3 class="uppercase tracking-[3px] text-xs font-semibold mb-6">
+                        What I Do
+                    </h3>
+
+                    <div class="flex flex-col gap-3 text-sm text-gray-500">
+
+                        <p>Web Development</p>
+
+                        <p>Responsive Design</p>
+
+                        <p>Modern UI Development</p>
+
+                        <p>Frontend Development</p>
+
+                        <p>Website Optimization</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOTTOM -->
+
+            <div
+                class="border-t border-gray-200 pt-7 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-gray-400">
+
+                <p>
+                    © 2026 Ayush Sharma. All Rights Reserved.
+                </p>
+
+                <p>
+                    Designed & Developed by
+                    <span class="text-gold">
+                        Ayush Sharma
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* MOBILE MENU */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const closeMenu = document.getElementById("closeMenu");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileLinks = document.querySelectorAll(".mobileLink");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.remove("translate-x-full");
+            document.body.classList.add("overflow-hidden");
+        });
+
+        closeMenu.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+            document.body.classList.remove("overflow-hidden");
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("translate-x-full");
+                document.body.classList.remove("overflow-hidden");
+            });
+        });
+
+
+        /* ESC CLOSE */
+
+        document.addEventListener("keydown", (event) => {
+
+            if (event.key === "Escape") {
+                mobileMenu.classList.add("translate-x-full");
+                document.body.classList.remove("overflow-hidden");
+            }
+
+        });
+
+
+        /* ================= WHATSAPP CONTACT FORM ================= */
+
+        const contactForm = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+
+        contactForm.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+            /* YOUR WHATSAPP NUMBER */
+            const whatsappNumber = "916397165594";
+            /* FORM DATA */
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+
+            /* WHATSAPP MESSAGE */
+
+            const whatsappMessage = `6397165594
+Hello Ayush,
+
+I have a new message from your website.
+
+━━━━━━━━━━━━━━━━━━
+
+👤 Name:
+${name}
+
+📧 Email:
+${email}
+
+📌 Subject:
+${subject}
+
+💬 Message:
+${message}
+
+━━━━━━━━━━━━━━━━━━
+
+Sent from Ayush Sharma Portfolio.
+        `;
+
+
+            /* OPEN WHATSAPP */
+
+            const whatsappURL =
+                `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+            window.open(whatsappURL, "_blank");
+
+
+            /* SUCCESS MESSAGE */
+
+            successMessage.innerHTML = `
+            <i class="fa-brands fa-whatsapp mr-2"></i>
+            Your message is ready to send on WhatsApp.
+        `;
+
+            successMessage.classList.remove("hidden");
+
+            contactForm.reset();
+
+
+            /* HIDE SUCCESS MESSAGE */
+
+            setTimeout(() => {
+                successMessage.classList.add("hidden");
+            }, 5000);
+
+        });
+
+
+        /* ================= NAVBAR SHADOW ================= */
+
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 30) {
+                navbar.classList.add("shadow-sm");
+            } else {
+                navbar.classList.remove("shadow-sm");
+            }
+
+        });
+
+    
+
+    </script>
+
+</body>
+
+</html>

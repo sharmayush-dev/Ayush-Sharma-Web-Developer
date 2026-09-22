@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Work | Ayush Sharma</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Luxury Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+                        gold: "#B08D57"
+                    },
+
+                    fontFamily: {
+
+                        sans: [
+                            "Inter",
+                            "sans-serif"
+                        ],
+
+                        luxury: [
+                            "Cormorant Garamond",
+                            "serif"
+                        ]
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: #B08D57;
+            color: white;
+        }
+
+        .project-image {
+            transition:
+                transform 0.8s cubic-bezier(.2, .7, .2, 1);
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.07);
+        }
+
+        .project-overlay {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-number {
+            transition: 0.4s ease;
+        }
+
+        .project-card:hover .project-number {
+            color: #B08D57;
+        }
+    </style>
+
+</head>
+
+
+
+<body class="bg-white text-black font-sans">
+
+
+
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <header class="fixed top-0 left-0 w-full
+           bg-white/90 backdrop-blur-xl
+           border-b border-gray-100
+           z-50">
+
+
+        <nav class="max-w-7xl mx-auto
+               px-6 lg:px-10
+               py-5
+               flex items-center
+               justify-between">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="font-luxury
+                   text-2xl
+                   font-semibold
+                   tracking-[0.15em]
+                   hover:text-gold
+                   transition">
+
+                AYUSH
+                <span class="text-gold">
+                    SHARMA
+                </span>
+
+            </a>
+
+
+
+            <!-- DESKTOP NAV -->
+
+            <div class="hidden md:flex
+                   items-center
+                   gap-9
+                   text-1sm">
+
+
+                <a href="work.html" class="text-black text-[17px] tracking-widest font-semibold hover:text-gold transition">
+
+                    Hello Sir
+
+                </a>
+
+            </div>
+
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button id="menuBtn" type="button" class="md:hidden
+                   w-10 h-10
+                   border border-gray-300
+                   flex flex-col
+                   items-center
+                   justify-center
+                   gap-1.5
+                   hover:border-gold
+                   transition mr-5">
+
+                <span class="w-5 h-px bg-black"></span>
+                <span class="w-5 h-px bg-black"></span>
+                <span class="w-5 h-px bg-black"></span>
+
+            </button>
+
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+    <div id="mobileMenu" class="fixed inset-0
+           bg-white
+           z-[60]
+           translate-x-full
+           transition-transform duration-300">
+
+
+        <button id="closeMenu" type="button" class="absolute
+               top-6 right-6
+               w-10 h-10
+               flex items-center
+               justify-center
+               text-4xl
+               leading-none
+               text-black
+               bg-white
+               border border-gray-200
+               rounded-full
+               hover:text-gold
+               hover:border-gold
+               transition
+               z-[70]">
+
+            ×
+
+        </button>
+
+
+        <div class="flex flex-col
+               gap-7
+               mt-28
+               px-8
+               font-luxury
+               text-xl
+               font-semibold">
+
+
+            <a href="index.html" class="mobile-link
+                   hover:text-gold
+                   transition">
+
+                Home
+
+            </a>
+
+
+            <a href="index3.html" class="mobile-link
+                   hover:text-gold
+                   transition">
+
+                About
+
+            </a>
+
+
+            <a href="index4.html" class="mobile-link
+                   hover:text-gold
+                   transition">
+
+                Skills
+
+            </a>
+
+
+            <a href="work.html" class="mobile-link
+                   text-black hover:text-gold">
+
+                Work
+
+            </a>
+            <a href="index6.html" class="mobile-link
+                   text-black hover:text-gold">
+
+                Experience
+
+            </a>
+            <a href="index7.html" class="mobile-link
+                   text-black hover:text-gold">
+
+                Contact
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+     MAIN
+===================================================== -->
+
+    <main>
+
+
+
+        <!-- =====================================================
+     HERO
+===================================================== -->
+
+        <section class="pt-40
+           pb-24
+           lg:pt-48
+           lg:pb-32">
+
+
+            <div class="max-w-7xl
+               mx-auto
+               px-6 lg:px-10">
+
+
+                <div class="max-w-5xl">
+
+
+                    <div class="flex
+                       items-center
+                       gap-4
+                       mb-6">
+
+
+                        <span class="w-10
+                           h-px
+                           bg-gold">
+                        </span>
+
+
+                        <p class="text-gold
+                           text-xs
+                           font-semibold
+                           tracking-[0.35em]
+                           uppercase">
+
+                            Selected Projects
+
+                        </p>
+
+                    </div>
+
+
+
+                    <h1 class="font-luxury
+                       text-7xl
+                       sm:text-8xl
+                       lg:text-[10rem]
+                       font-semibold
+                       leading-[0.75]
+                       tracking-tight">
+
+                        My
+
+                        <span class="text-gold">
+                            Work.
+                        </span>
+
+                    </h1>
+
+
+
+                    <div class="mt-12
+                       flex flex-col
+                       md:flex-row
+                       md:items-end
+                       md:justify-between
+                       gap-8">
+
+
+                        <p class="max-w-xl
+                           text-gray-500
+                           leading-8
+                           text-base
+                           lg:text-lg">
+
+                            A selection of websites and digital
+                            experiences crafted with clean design,
+                            responsive layouts and modern web
+                            technologies.
+
+                        </p>
+
+
+
+                        <div class="hidden md:block
+                           text-right">
+
+
+                            <p class="font-luxury
+                               text-5xl
+                               font-semibold">
+
+                                04
+
+                            </p>
+
+
+                            <p class="text-xs
+                               text-gray-400
+                               tracking-[0.2em]
+                               uppercase">
+
+                                Featured Projects
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+        <section class="pb-32">
+
+
+            <div class="max-w-7xl
+               mx-auto
+               px-6 lg:px-10">
+
+
+                <!-- PROJECT 01 -->
+
+                <article class="project-card
+                   group
+                   border-t
+                   border-gray-200
+                   pt-8
+                   pb-20">
+
+
+                    <div class="grid
+                       lg:grid-cols-[1fr_1.7fr]
+                       gap-8
+                       lg:gap-14
+                       items-start">
+
+
+                        <!-- LEFT -->
+
+                        <div class="lg:sticky
+                           lg:top-32">
+
+
+                            <div class="flex
+                               items-center
+                               justify-between
+                               mb-5">
+
+
+                                <span class="project-number
+                                   font-luxury
+                                   text-4xl
+                                   font-semibold">
+
+                                    01
+
+                                </span>
+
+
+                                <span class="text-xs
+                                   tracking-[0.25em]
+                                   uppercase
+                                   text-gray-400">
+
+                                    2026
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-gold
+                               text-xs
+                               font-semibold
+                               tracking-[0.25em]
+                               uppercase">
+
+                                Luxury Hospitality
+
+                            </p>
+
+
+                            <h2 class="font-luxury
+                               text-5xl
+                               lg:text-6xl
+                               font-semibold
+                               mt-3
+                               group-hover:text-gold
+                               transition">
+
+                                The Aurelia
+
+                            </h2>
+
+
+                            <p class="text-gray-500
+                               leading-7
+                               mt-5
+                               max-w-md">
+
+                                A luxury hotel website focused on
+                                elegant presentation, responsive
+                                design and interactive booking
+                                experiences.
+
+                            </p>
+
+
+                            <div class="flex
+                               flex-wrap
+                               gap-2
+                               mt-7">
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    HTML
+
+                                </span>
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    Tailwind
+
+                                </span>
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    JavaScript
+
+                                </span>
+
+                            </div>
+
+
+                            <a href="#" class="inline-flex
+                               items-center
+                               gap-3
+                               mt-8
+                               text-sm
+                               font-medium
+                               group-hover:text-gold
+                               transition">
+
+                                View Project
+
+                                <i class="fa-solid
+                                   fa-arrow-right
+                                   text-xs">
+                                </i>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- RIGHT IMAGE -->
+
+                        <div class="relative
+                           overflow-hidden
+                           aspect-[16/10]
+                           bg-gray-100">
+
+
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=90"
+                                alt="The Aurelia Luxury Hotel" class="project-image
+                               w-full
+                               h-full
+                               object-cover">
+
+
+                            <div class="project-overlay
+                               absolute
+                               inset-0
+                               bg-black/25
+                               flex items-end
+                               justify-end
+                               p-6">
+
+
+                                <div class="w-14 h-14
+                                   bg-white
+                                   rounded-full
+                                   flex items-center
+                                   justify-center
+                                   text-black">
+
+                                    <i class="fa-solid
+                                       fa-arrow-up-right-from-square">
+                                    </i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 02 -->
+
+                <article class="project-card
+                   group
+                   border-t
+                   border-gray-200
+                   pt-8
+                   pb-20">
+
+
+                    <div class="grid
+                       lg:grid-cols-[1.7fr_1fr]
+                       gap-8
+                       lg:gap-14
+                       items-start">
+
+
+                        <!-- IMAGE -->
+
+                        <div class="relative
+                           overflow-hidden
+                           aspect-[16/10]
+                           bg-gray-100
+                           order-2
+                           lg:order-1">
+
+
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/296502111/FI/GX/OG/85349617/jewellery-shop-interior-designing-service.jpeg"
+                                alt="Kataria Jewels" class="project-image
+                               w-full
+                               h-full
+                               object-cover">
+
+
+                            <div class="project-overlay
+                               absolute
+                               inset-0
+                               bg-black/25
+                               flex items-end
+                               justify-end
+                               p-6">
+
+
+                                <div class="w-14 h-14
+                                   bg-white
+                                   rounded-full
+                                   flex items-center
+                                   justify-center
+                                   text-black">
+
+                                    <i class="fa-solid
+                                       fa-arrow-up-right-from-square">
+                                    </i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONTENT -->
+
+                        <div class="order-1
+                           lg:order-2">
+
+
+                            <div class="flex
+                               items-center
+                               justify-between
+                               mb-5">
+
+
+                                <span class="project-number
+                                   font-luxury
+                                   text-4xl
+                                   font-semibold">
+
+                                    02
+
+                                </span>
+
+
+                                <span class="text-xs
+                                   tracking-[0.25em]
+                                   uppercase
+                                   text-gray-400">
+
+                                    2026
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-gold
+                               text-xs
+                               font-semibold
+                               tracking-[0.25em]
+                               uppercase">
+
+                                Luxury E-Commerce
+
+                            </p>
+
+
+                            <h2 class="font-luxury
+                               text-5xl
+                               lg:text-6xl
+                               font-semibold
+                               mt-3
+                               group-hover:text-gold
+                               transition">
+
+                                Kataria Jewels
+
+                            </h2>
+
+
+                            <p class="text-gray-500
+                               leading-7
+                               mt-5">
+
+                                A premium jewellery website concept
+                                combining luxury visuals, elegant
+                                typography and a modern shopping
+                                interface.
+
+                            </p>
+
+
+                            <div class="flex
+                               flex-wrap
+                               gap-2
+                               mt-7">
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    HTML
+
+                                </span>
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    Tailwind CSS
+
+                                </span>
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    JavaScript
+
+                                </span>
+
+                            </div>
+
+
+                            <a href="#" class="inline-flex
+                               items-center
+                               gap-3
+                               mt-8
+                               text-sm
+                               font-medium
+                               hover:text-gold
+                               transition">
+
+                                View Project
+
+                                <i class="fa-solid
+                                   fa-arrow-right
+                                   text-xs">
+                                </i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 03 -->
+
+                <article class="project-card
+                   group
+                   border-t
+                   border-gray-200
+                   pt-8
+                   pb-20">
+
+
+                    <div class="grid
+                       lg:grid-cols-[1fr_1.7fr]
+                       gap-8
+                       lg:gap-14
+                       items-start">
+
+
+                        <!-- CONTENT -->
+
+                        <div>
+
+
+                            <div class="flex
+                               items-center
+                               justify-between
+                               mb-5">
+
+
+                                <span class="project-number
+                                   font-luxury
+                                   text-4xl
+                                   font-semibold">
+
+                                    03
+
+                                </span>
+
+
+                                <span class="text-xs
+                                   tracking-[0.25em]
+                                   uppercase
+                                   text-gray-400">
+
+                                    2026
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-gold
+                               text-xs
+                               font-semibold
+                               tracking-[0.25em]
+                               uppercase">
+
+                                Automotive
+
+                            </p>
+
+
+                            <h2 class="font-luxury
+                               text-5xl
+                               lg:text-6xl
+                               font-semibold
+                               mt-3
+                               group-hover:text-gold
+                               transition">
+
+                                XEV Automotive
+
+                            </h2>
+
+
+                            <p class="text-gray-500
+                               leading-7
+                               mt-5
+                               max-w-md">
+
+                                A modern automotive landing page
+                                designed around bold visuals,
+                                strong typography and responsive
+                                layouts.
+
+                            </p>
+
+
+                            <div class="flex
+                               flex-wrap
+                               gap-2
+                               mt-7">
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    HTML
+
+                                </span>
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    CSS
+
+                                </span>
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    JavaScript
+
+                                </span>
+
+                            </div>
+
+
+                            <a href="#" class="inline-flex
+                               items-center
+                               gap-3
+                               mt-8
+                               text-sm
+                               font-medium
+                               hover:text-gold
+                               transition">
+
+                                View Project
+
+                                <i class="fa-solid
+                                   fa-arrow-right
+                                   text-xs">
+                                </i>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- IMAGE -->
+
+                        <div class="relative
+                           overflow-hidden
+                           aspect-[16/10]
+                           bg-gray-100">
+
+
+                            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=90"
+                                alt="Automotive Website" class="project-image
+                               w-full
+                               h-full
+                               object-cover">
+
+
+                            <div class="project-overlay
+                               absolute
+                               inset-0
+                               bg-black/25
+                               flex items-end
+                               justify-end
+                               p-6">
+
+
+                                <div class="w-14 h-14
+                                   bg-white
+                                   rounded-full
+                                   flex items-center
+                                   justify-center
+                                   text-black">
+
+                                    <i class="fa-solid
+                                       fa-arrow-up-right-from-square">
+                                    </i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 04 -->
+
+                <article class="project-card
+                   group
+                   border-t
+                   border-gray-200
+                   pt-8
+                   pb-20">
+
+
+                    <div class="grid
+                       lg:grid-cols-[1.7fr_1fr]
+                       gap-8
+                       lg:gap-14
+                       items-start">
+
+
+                        <!-- IMAGE -->
+
+                        <div class="relative
+                           overflow-hidden
+                           aspect-[16/10]
+                           bg-gray-100
+                           order-2
+                           lg:order-1">
+
+
+                            <img src="https://wrapmarketusercontent.com/assets/items/full/0aac54513fbd6850f33a315560f1ba90db852ab6f08d9478f9a0054b3d6e0e63.webp?v=1757469862"
+                                alt="Portfolio Website" class="project-image
+                               w-full
+                               h-full
+                               object-cover">
+
+
+                            <div class="project-overlay
+                               absolute
+                               inset-0
+                               bg-black/25
+                               flex items-end
+                               justify-end
+                               p-6">
+
+
+                                <div class="w-14 h-14
+                                   bg-white
+                                   rounded-full
+                                   flex items-center
+                                   justify-center
+                                   text-black">
+
+                                    <i class="fa-solid
+                                       fa-arrow-up-right-from-square">
+                                    </i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONTENT -->
+
+                        <div class="order-1
+                           lg:order-2">
+
+
+                            <div class="flex
+                               items-center
+                               justify-between
+                               mb-5">
+
+
+                                <span class="project-number
+                                   font-luxury
+                                   text-4xl
+                                   font-semibold">
+
+                                    04
+
+                                </span>
+
+
+                                <span class="text-xs
+                                   tracking-[0.25em]
+                                   uppercase
+                                   text-gray-400">
+
+                                    2026
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-gold
+                               text-xs
+                               font-semibold
+                               tracking-[0.25em]
+                               uppercase">
+
+                                Personal Portfolio
+
+                            </p>
+
+
+                            <h2 class="font-luxury
+                               text-5xl
+                               lg:text-6xl
+                               font-semibold
+                               mt-3
+                               group-hover:text-gold
+                               transition">
+
+                                Developer Portfolio
+
+                            </h2>
+
+
+                            <p class="text-gray-500
+                               leading-7
+                               mt-5">
+
+                                A professional portfolio experience
+                                created to present development work,
+                                projects and digital capabilities.
+
+                            </p>
+
+
+                            <div class="flex
+                               flex-wrap
+                               gap-2
+                               mt-7">
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    HTML
+
+                                </span>
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    Tailwind
+
+                                </span>
+
+
+                                <span class="px-3 py-1
+                                   border
+                                   border-gray-200
+                                   text-xs">
+
+                                    JavaScript
+
+                                </span>
+
+                            </div>
+
+
+                            <a href="#" class="inline-flex
+                               items-center
+                               gap-3
+                               mt-8
+                               text-sm
+                               font-medium
+                               hover:text-gold
+                               transition">
+
+                                View Project
+
+                                <i class="fa-solid
+                                   fa-arrow-right
+                                   text-xs">
+                                </i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ================= WORK DETAILS ================= -->
+        <section class="bg-[#f8f7f4] py-24 md:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+
+                <!-- Heading -->
+                <div class="max-w-3xl mb-16">
+                    <p class="text-[#B08D57] text-xs font-semibold tracking-[0.35em] uppercase mb-4">
+                        Work Details
+                    </p>
+
+                    <h2 class="font-luxury text-5xl md:text-7xl leading-tight text-black">
+                        How I <span class="text-[#B08D57]">Build.</span>
+                    </h2>
+
+                    <p class="mt-6 text-gray-600 text-base md:text-lg leading-8 max-w-2xl">
+                        I focus on creating modern, responsive and user-friendly websites
+                        with clean design, smooth interactions and well-structured code.
+                        Every project is built with attention to detail and performance.
+                    </p>
+                </div>
+
+
+                <!-- Details Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-300">
+
+                    <!-- 01 -->
+                    <div class="bg-[#f8f7f4] p-8 md:p-12 group hover:bg-white transition duration-500">
+
+                        <span class="text-[#B08D57] text-sm tracking-widest">
+                            01
+                        </span>
+
+                        <h3 class="font-luxury text-3xl md:text-4xl mt-5 mb-4">
+                            Clean & Modern Design
+                        </h3>
+
+                        <p class="text-gray-600 leading-7">
+                            I create clean and premium interfaces with proper spacing,
+                            typography, visual hierarchy and attractive layouts that
+                            provide a professional user experience.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 02 -->
+                    <div class="bg-[#f8f7f4] p-8 md:p-12 group hover:bg-white transition duration-500">
+
+                        <span class="text-[#B08D57] text-sm tracking-widest">
+                            02
+                        </span>
+
+                        <h3 class="font-luxury text-3xl md:text-4xl mt-5 mb-4">
+                            Responsive Development
+                        </h3>
+
+                        <p class="text-gray-600 leading-7">
+                            I make websites responsive for mobile, tablet and desktop
+                            devices so the layout and content work smoothly across
+                            different screen sizes.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 03 -->
+                    <div class="bg-[#f8f7f4] p-8 md:p-12 group hover:bg-white transition duration-500">
+
+                        <span class="text-[#B08D57] text-sm tracking-widest">
+                            03
+                        </span>
+
+                        <h3 class="font-luxury text-3xl md:text-4xl mt-5 mb-4">
+                            Interactive Experience
+                        </h3>
+
+                        <p class="text-gray-600 leading-7">
+                            I use JavaScript to add useful interactions such as mobile
+                            menus, modals, sliders, forms, buttons, animations and
+                            dynamic website functionality.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 04 -->
+                    <div class="bg-[#f8f7f4] p-8 md:p-12 group hover:bg-white transition duration-500">
+
+                        <span class="text-[#B08D57] text-sm tracking-widest">
+                            04
+                        </span>
+
+                        <h3 class="font-luxury text-3xl md:text-4xl mt-5 mb-4">
+                            Clean & Structured Code
+                        </h3>
+
+                        <p class="text-gray-600 leading-7">
+                            I try to keep my HTML, CSS and JavaScript structured,
+                            readable and easy to maintain while following a simple
+                            and practical development approach.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Technologies -->
+                <div class="mt-20 pt-12 border-t border-gray-300">
+
+                    <p class="text-[#B08D57] text-xs font-semibold tracking-[0.3em] uppercase mb-7">
+                        Technologies I Use
+                    </p>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <span
+                            class="px-5 py-3 border border-gray-300 text-sm hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            HTML5
+                        </span>
+
+                        <span
+                            class="px-5 py-3 border border-gray-300 text-sm hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            CSS3
+                        </span>
+
+                        <span
+                            class="px-5 py-3 border border-gray-300 text-sm hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            JavaScript
+                        </span>
+
+                        <span
+                            class="px-5 py-3 border border-gray-300 text-sm hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            Tailwind CSS
+                        </span>
+
+                        <span
+                            class="px-5 py-3 border border-gray-300 text-sm hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            Responsive Design
+                        </span>
+
+                        <span
+                            class="px-5 py-3 border border-gray-300 text-sm hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            Git & GitHub
+                        </span>
+
+                        <span
+                            class="px-5 py-3 border border-gray-300 text-sm hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            VS Code
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Bottom Statement -->
+                <div class="mt-20 max-w-3xl">
+
+                    <h3 class="font-luxury text-3xl md:text-4xl leading-tight">
+                        From concept to final interface,
+                        <span class="text-[#B08D57]">
+                            every detail matters.
+                        </span>
+                    </h3>
+
+                    <p class="mt-5 text-gray-600 leading-7">
+                        My goal is not only to make a website look good, but also to
+                        make it functional, responsive and easy for users to navigate.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+     END SECTION
+===================================================== -->
+
+        <section class="border-t
+           border-gray-200
+           py-28">
+
+
+            <div class="max-w-4xl
+               mx-auto
+               px-6
+               text-center">
+
+
+                <p class="text-gold
+                   text-xs
+                   tracking-[0.35em]
+                   uppercase
+                   font-semibold">
+
+                    More To Come
+
+                </p>
+
+
+                <h2 class="font-luxury
+                   text-6xl
+                   md:text-7xl
+                   font-semibold
+                   mt-5">
+
+                    Always Creating.
+
+                </h2>
+
+
+                <p class="max-w-xl
+                   mx-auto
+                   text-gray-500
+                   leading-7
+                   mt-6">
+
+                    Every project is an opportunity to learn,
+                    experiment and create something better.
+
+                </p>
+
+
+                <a href="index.html" class="inline-flex
+                   items-center
+                   gap-3
+                   mt-8
+                   border
+                   border-black
+                   px-7 py-3
+                   text-sm
+                   hover:bg-black
+                   hover:text-white
+                   transition">
+
+                    Back Home
+
+                    <i class="fa-solid
+                       fa-arrow-right
+                       text-xs">
+                    </i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#111111] text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-20">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <!-- BRAND -->
+                <div class="lg:col-span-2">
+
+                    <p class="text-[#B08D57] text-xs tracking-[0.3em] uppercase mb-5">
+                        Web Developer
+                    </p>
+
+                    <h2 class="font-luxury text-5xl md:text-6xl leading-none">
+                        AYUSH
+                        <span class="text-[#B08D57]">SHARMA</span>
+                    </h2>
+
+                    <p class="text-gray-400 leading-7 max-w-lg mt-7">
+                        I create modern, responsive and user-focused websites
+                        using clean design, structured code and interactive
+                        web technologies.
+                    </p>
+
+                    <div class="flex gap-4 mt-8">
+
+                        <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center
+                              hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center
+                              hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center
+                              hover:border-[#B08D57] hover:text-[#B08D57] transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NAVIGATION -->
+                <div>
+
+                    <p class="text-[#B08D57] text-xs tracking-[0.3em] uppercase mb-6">
+                        Navigation
+                    </p>
+
+                    <div class="flex flex-col gap-4 text-gray-400">
+
+                        <a href="work.html" class="hover:text-white transition">
+                            Work
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- DETAILS -->
+                <div>
+
+                    <p class="text-[#B08D57] text-xs tracking-[0.3em] uppercase mb-6">
+                        What I Do
+                    </p>
+
+                    <div class="flex flex-col gap-4 text-gray-400">
+
+                        <span>Website Development</span>
+
+                        <span>Responsive Design</span>
+
+                        <span>UI Implementation</span>
+
+                        <span>JavaScript Development</span>
+
+                        <span>Tailwind CSS</span>
+
+                        <span>Website Optimization</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIVIDER -->
+            <div class="border-t border-gray-800 mt-16 pt-8">
+
+                <div class="flex flex-col md:flex-row justify-between
+                        items-center gap-4">
+
+                    <p class="text-gray-500 text-sm">
+                        © 2026 Ayush Sharma. All rights reserved.
+                    </p>
+
+                    <p class="text-gray-500 text-sm">
+                        Designed & Developed by
+                        <span class="text-[#B08D57]">
+                            Ayush Sharma
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+    <script>
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const closeMenu =
+            document.getElementById("closeMenu");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        // OPEN
+
+        menuBtn.addEventListener(
+            "click",
+            function () {
+
+                mobileMenu.classList.remove(
+                    "translate-x-full"
+                );
+
+                document.body.style.overflow =
+                    "hidden";
+
+            }
+        );
+
+
+        // CLOSE
+
+        closeMenu.addEventListener(
+            "click",
+            function () {
+
+                mobileMenu.classList.add(
+                    "translate-x-full"
+                );
+
+                document.body.style.overflow =
+                    "";
+
+            }
+        );
+
+
+        // MOBILE LINKS
+
+        document
+            .querySelectorAll(".mobile-link")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        mobileMenu.classList.add(
+                            "translate-x-full"
+                        );
+
+                        document.body.style.overflow =
+                            "";
+
+                    }
+                );
+
+            });
+
+
+        // ESC
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key === "Escape") {
+
+                    mobileMenu.classList.add(
+                        "translate-x-full"
+                    );
+
+                    document.body.style.overflow =
+                        "";
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
