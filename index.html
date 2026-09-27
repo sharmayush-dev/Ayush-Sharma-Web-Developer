@@ -1746,7 +1746,7 @@
                             </p>
 
                             <p class="mt-2">
-                                sayush7922@gmail.com                           
+                                sayush7922@gmail.com
                             </p>
 
                         </div>
@@ -1845,25 +1845,26 @@
                             <select
                                 class="w-full appearance-none bg-transparent border-0 border-b border-gray-500 px-0 py-4 pr-10 text-white text-sm outline-none focus:border-white transition-all cursor-pointer"
                                 id="projectType" required>
-                                <option class="bg-gray-900 text-white" value="Full Website">
-                                    Full Luxury Website
+                                <option class="bg-gray-900 text-white" value="Full Website">Bespoke Ultra-Luxury Website
                                 </option>
-
-                                <option class="bg-gray-900 text-white" value="Landing Page">
-                                    Hero Landing Experience
+                                <option class="bg-gray-900 text-white" value="Landing Page">Signature Hero Landing
+                                    Experience</option>
+                                <option class="bg-gray-900 text-white" value="UI Implementation">Elite Figma to Flawless
+                                    Code</option>
+                                <option class="bg-gray-900 text-white" value="Website Redesign">Iconic Brand
+                                    Modernization & Redesign</option>
+                                <option class="bg-gray-900 text-white" value="E-Commerce">High-Ticket E-Commerce Atelier
                                 </option>
-
-                                <option class="bg-gray-900 text-white" value="UI Implementation">
-                                    Figma to Code Implementation
+                                <option class="bg-gray-900 text-white" value="SaaS Platform">Premium SaaS & Private
+                                    Dashboard</option>
+                                <option class="bg-gray-900 text-white" value="Portfolio">Executive Personal Brand
+                                    Portfolio</option>
+                                <option class="bg-gray-900 text-white" value="MVP Build">Investor-Ready Startup MVP
                                 </option>
-
-                                <option class="bg-gray-900 text-white" value="Website Redesign">
-                                    Modernization &amp; Redesign
-                                </option>
-
-                                <option class="bg-gray-900 text-white" value="Full-Time / Retainer">
-                                    Full-Time / Engineering Retainer
-                                </option>
+                                <option class="bg-gray-900 text-white" value="Speed Optimization">7-Figure Conversion &
+                                    Performance Scale</option>
+                                <option class="bg-gray-900 text-white" value="Full-Time / Retainer">Private Engineering
+                                    Retainer</option>
                             </select>
 
                             <span
@@ -1887,8 +1888,14 @@
                             <select id="budgetRange"
                                 class="w-full appearance-none bg-transparent border-0 border-b border-gray-500 px-0 py-4 pr-8 text-white text-sm outline-none focus:border-white cursor-pointer">
                                 <option class="bg-gray-900 text-white">$3,000 — $5,000 USD</option>
-                                <option class="bg-gray-900 text-white">$5,000 — $10,000 USD</option>
-                                <option class="bg-gray-900 text-white">$10,000+ USD</option>
+                                <option class="bg-gray-900 text-white">$5,000 — $7,000 USD</option>
+                                <option class="bg-gray-900 text-white">$7,000 — $10,000 USD</option>
+                                <option class="bg-gray-900 text-white">$10,000 — $15,000 USD</option>
+                                <option class="bg-gray-900 text-white">$15,000 — $25,000 USD</option>
+                                <option class="bg-gray-900 text-white">$25,000 — $40,000 USD</option>
+                                <option class="bg-gray-900 text-white">$40,000 — $60,000 USD</option>
+                                <option class="bg-gray-900 text-white">$60,000 — $100,000 USD</option>
+                                <option class="bg-gray-900 text-white">$100,000+ USD</option>
                                 <option class="bg-gray-900 text-white">
                                     Full-time Senior Engineering Compensation
                                 </option>
@@ -2232,555 +2239,555 @@
 
 
 
-<script>
-    /* =========================================================
-   AYUSH SHARMA — PORTFOLIO JAVASCRIPT
-   ========================================================= */
+    <script>
+        /* =========================================================
+       AYUSH SHARMA — PORTFOLIO JAVASCRIPT
+       ========================================================= */
 
 
-/* =========================================================
-   1. PAGE LOADER
-   ========================================================= */
+        /* =========================================================
+           1. PAGE LOADER
+           ========================================================= */
 
-window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
 
-    if (loader) {
-        loader.classList.add("hidden");
-    }
-});
-
-
-/* =========================================================
-   2. NAVBAR SCROLL EFFECT
-   ========================================================= */
-
-const navbar = document.getElementById("navbar");
-
-window.addEventListener("scroll", () => {
-    if (!navbar) return;
-
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-});
+            if (loader) {
+                loader.classList.add("hidden");
+            }
+        });
 
 
-/* =========================================================
-   3. MOBILE MENU
-   ========================================================= */
+        /* =========================================================
+           2. NAVBAR SCROLL EFFECT
+           ========================================================= */
 
-const menuBtn = document.getElementById("menuBtn");
-const closeMenuBtn = document.getElementById("closeMenu");
-const mobileMenu = document.getElementById("mobileMenu");
-const mobileLinks = document.querySelectorAll(".mobile-link");
+        const navbar = document.getElementById("navbar");
 
+        window.addEventListener("scroll", () => {
+            if (!navbar) return;
 
-function openMobileMenu() {
-    if (!mobileMenu) return;
-
-    mobileMenu.classList.remove("translate-x-full");
-    document.body.classList.add("overflow-hidden");
-}
-
-
-function closeMobileMenu() {
-    if (!mobileMenu) return;
-
-    mobileMenu.classList.add("translate-x-full");
-    document.body.classList.remove("overflow-hidden");
-}
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
 
 
-if (menuBtn) {
-    menuBtn.addEventListener("click", openMobileMenu);
-}
+        /* =========================================================
+           3. MOBILE MENU
+           ========================================================= */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const closeMenuBtn = document.getElementById("closeMenu");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
 
 
-if (closeMenuBtn) {
-    closeMenuBtn.addEventListener("click", closeMobileMenu);
-}
+        function openMobileMenu() {
+            if (!mobileMenu) return;
 
-
-mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-        closeMobileMenu();
-    });
-});
-
-
-/* =========================================================
-   4. ESC KEY
-   ========================================================= */
-
-document.addEventListener("keydown", (e) => {
-
-    if (e.key === "Escape") {
-
-        closeMobileMenu();
-
-        if (typeof closeProject === "function") {
-            closeProject();
+            mobileMenu.classList.remove("translate-x-full");
+            document.body.classList.add("overflow-hidden");
         }
 
-        if (typeof closeResume === "function") {
-            closeResume();
+
+        function closeMobileMenu() {
+            if (!mobileMenu) return;
+
+            mobileMenu.classList.add("translate-x-full");
+            document.body.classList.remove("overflow-hidden");
         }
 
-    }
 
-});
-
-
-/* =========================================================
-   5. SMOOTH SCROLL
-   ========================================================= */
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-
-    link.addEventListener("click", function (e) {
-
-        const targetId = this.getAttribute("href");
-
-        if (!targetId || targetId === "#") {
-            return;
+        if (menuBtn) {
+            menuBtn.addEventListener("click", openMobileMenu);
         }
 
-        const target = document.querySelector(targetId);
 
-        if (target) {
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener("click", closeMobileMenu);
+        }
 
-            e.preventDefault();
 
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                closeMobileMenu();
             });
-
-        }
-
-    });
-
-});
+        });
 
 
-/* =========================================================
-   6. SCROLL REVEAL ANIMATION
-   ========================================================= */
+        /* =========================================================
+           4. ESC KEY
+           ========================================================= */
 
-const revealElements = document.querySelectorAll(".reveal");
+        document.addEventListener("keydown", (e) => {
 
-const revealObserver = new IntersectionObserver(
-    (entries) => {
+            if (e.key === "Escape") {
 
-        entries.forEach((entry) => {
+                closeMobileMenu();
 
-            if (entry.isIntersecting) {
+                if (typeof closeProject === "function") {
+                    closeProject();
+                }
 
-                entry.target.classList.add("show");
-
-                revealObserver.unobserve(entry.target);
+                if (typeof closeResume === "function") {
+                    closeResume();
+                }
 
             }
 
         });
 
-    },
-    {
-        threshold: 0.12
-    }
-);
 
+        /* =========================================================
+           5. SMOOTH SCROLL
+           ========================================================= */
 
-revealElements.forEach((element) => {
-    revealObserver.observe(element);
-});
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
+            link.addEventListener("click", function (e) {
 
-/* =========================================================
-   7. PROJECT DATA
-   ========================================================= */
+                const targetId = this.getAttribute("href");
 
-const projects = {
+                if (!targetId || targetId === "#") {
+                    return;
+                }
 
-    aurelia: {
+                const target = document.querySelector(targetId);
 
-        title: "The Aurelia",
+                if (target) {
 
-        category: "Luxury Hotel & Resort",
+                    e.preventDefault();
 
-        description:
-            "A premium luxury hotel website focused on elegant presentation, responsive design and interactive booking experiences.",
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
 
-        technologies:
-            "HTML • CSS • JavaScript • Tailwind CSS",
+                }
 
-        features: [
+            });
 
-            "Responsive luxury hotel layout",
+        });
 
-            "Luxury rooms and suites presentation",
 
-            "Interactive booking experience",
+        /* =========================================================
+           6. SCROLL REVEAL ANIMATION
+           ========================================================= */
 
-            "Gallery and facilities sections",
+        const revealElements = document.querySelectorAll(".reveal");
 
-            "Responsive navigation",
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
 
-            "Premium cinematic UI"
+                entries.forEach((entry) => {
 
-        ]
+                    if (entry.isIntersecting) {
 
-    },
+                        entry.target.classList.add("show");
 
+                        revealObserver.unobserve(entry.target);
 
-    jewels: {
+                    }
 
-        title: "Kataria Jewels",
+                });
 
-        category: "Luxury Jewellery",
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
-        description:
-            "A premium jewellery experience designed with cinematic visuals, elegant typography and a luxury-focused interface.",
 
-        technologies:
-            "HTML • Tailwind CSS • JavaScript",
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
+        });
 
-        features: [
 
-            "Luxury visual presentation",
+        /* =========================================================
+           7. PROJECT DATA
+           ========================================================= */
 
-            "Elegant typography system",
+        const projects = {
 
-            "Premium jewellery sections",
+            aurelia: {
 
-            "Responsive product layout",
+                title: "The Aurelia",
 
-            "Luxury navigation experience",
+                category: "Luxury Hotel & Resort",
 
-            "Premium UI interactions"
+                description:
+                    "A premium luxury hotel website focused on elegant presentation, responsive design and interactive booking experiences.",
 
-        ]
+                technologies:
+                    "HTML • CSS • JavaScript • Tailwind CSS",
 
-    },
+                features: [
 
+                    "Responsive luxury hotel layout",
 
-    xev: {
+                    "Luxury rooms and suites presentation",
 
-        title: "XEV 9S",
+                    "Interactive booking experience",
 
-        category: "Automotive Landing Page",
+                    "Gallery and facilities sections",
 
-        description:
-            "A modern automotive landing experience with cinematic visuals, responsive layouts and premium interaction design.",
+                    "Responsive navigation",
 
-        technologies:
-            "HTML • CSS • JavaScript • Tailwind CSS",
+                    "Premium cinematic UI"
 
-        features: [
+                ]
 
-            "Cinematic automotive layout",
+            },
 
-            "Responsive navigation",
 
-            "Product-focused sections",
+            jewels: {
 
-            "Modern hero presentation",
+                title: "Kataria Jewels",
 
-            "Responsive design",
+                category: "Luxury Jewellery",
 
-            "Premium interaction design"
+                description:
+                    "A premium jewellery experience designed with cinematic visuals, elegant typography and a luxury-focused interface.",
 
-        ]
+                technologies:
+                    "HTML • Tailwind CSS • JavaScript",
 
-    }
+                features: [
 
-};
+                    "Luxury visual presentation",
 
+                    "Elegant typography system",
 
-/* =========================================================
-   8. PROJECT MODAL
-   ========================================================= */
+                    "Premium jewellery sections",
 
-const projectModal = document.getElementById("projectModal");
+                    "Responsive product layout",
 
-const modalCategory = document.getElementById("modalCategory");
-const modalTitle = document.getElementById("modalTitle");
-const modalDescription = document.getElementById("modalDescription");
-const modalTech = document.getElementById("modalTech");
-const modalFeatures = document.getElementById("modalFeatures");
+                    "Luxury navigation experience",
 
+                    "Premium UI interactions"
 
-function openProject(projectKey) {
+                ]
 
-    const project = projects[projectKey];
+            },
 
-    if (!project || !projectModal) {
-        return;
-    }
 
+            xev: {
 
-    if (modalCategory) {
-        modalCategory.textContent = project.category;
-    }
+                title: "XEV 9S",
 
+                category: "Automotive Landing Page",
 
-    if (modalTitle) {
-        modalTitle.textContent = project.title;
-    }
+                description:
+                    "A modern automotive landing experience with cinematic visuals, responsive layouts and premium interaction design.",
 
+                technologies:
+                    "HTML • CSS • JavaScript • Tailwind CSS",
 
-    if (modalDescription) {
-        modalDescription.textContent = project.description;
-    }
+                features: [
 
+                    "Cinematic automotive layout",
 
-    if (modalTech) {
-        modalTech.textContent = project.technologies;
-    }
+                    "Responsive navigation",
 
+                    "Product-focused sections",
 
-    if (modalFeatures) {
+                    "Modern hero presentation",
 
-        modalFeatures.innerHTML = "";
+                    "Responsive design",
 
-        project.features.forEach((feature) => {
+                    "Premium interaction design"
 
-            const li = document.createElement("li");
+                ]
 
-            li.textContent = feature;
+            }
 
-            li.className =
-                "flex items-start gap-3 mb-3";
+        };
 
-            li.innerHTML = `
+
+        /* =========================================================
+           8. PROJECT MODAL
+           ========================================================= */
+
+        const projectModal = document.getElementById("projectModal");
+
+        const modalCategory = document.getElementById("modalCategory");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDescription = document.getElementById("modalDescription");
+        const modalTech = document.getElementById("modalTech");
+        const modalFeatures = document.getElementById("modalFeatures");
+
+
+        function openProject(projectKey) {
+
+            const project = projects[projectKey];
+
+            if (!project || !projectModal) {
+                return;
+            }
+
+
+            if (modalCategory) {
+                modalCategory.textContent = project.category;
+            }
+
+
+            if (modalTitle) {
+                modalTitle.textContent = project.title;
+            }
+
+
+            if (modalDescription) {
+                modalDescription.textContent = project.description;
+            }
+
+
+            if (modalTech) {
+                modalTech.textContent = project.technologies;
+            }
+
+
+            if (modalFeatures) {
+
+                modalFeatures.innerHTML = "";
+
+                project.features.forEach((feature) => {
+
+                    const li = document.createElement("li");
+
+                    li.textContent = feature;
+
+                    li.className =
+                        "flex items-start gap-3 mb-3";
+
+                    li.innerHTML = `
                 <span class="text-[#c9a45c] mt-1">✦</span>
                 <span>${feature}</span>
             `;
 
-            modalFeatures.appendChild(li);
+                    modalFeatures.appendChild(li);
 
-        });
-
-    }
-
-
-    projectModal.classList.remove("hidden");
-
-    projectModal.classList.add("flex");
-
-    document.body.classList.add("overflow-hidden");
-
-}
-
-
-function closeProject() {
-
-    if (!projectModal) {
-        return;
-    }
-
-    projectModal.classList.add("hidden");
-
-    projectModal.classList.remove("flex");
-
-    document.body.classList.remove("overflow-hidden");
-
-}
-
-
-/* =========================================================
-   9. CLOSE PROJECT MODAL WHEN CLICKING OUTSIDE
-   ========================================================= */
-
-if (projectModal) {
-
-    projectModal.addEventListener("click", (e) => {
-
-        if (e.target === projectModal) {
-            closeProject();
-        }
-
-    });
-
-}
-
-
-/* =========================================================
-   10. RESUME MODAL
-   ========================================================= */
-
-const resumeModal = document.getElementById("resumeModal");
-
-
-function openResume() {
-
-    if (!resumeModal) {
-        return;
-    }
-
-    resumeModal.classList.remove("hidden");
-
-    resumeModal.classList.add("flex");
-
-    document.body.classList.add("overflow-hidden");
-
-}
-
-
-function closeResume() {
-
-    if (!resumeModal) {
-        return;
-    }
-
-    resumeModal.classList.add("hidden");
-
-    resumeModal.classList.remove("flex");
-
-    document.body.classList.remove("overflow-hidden");
-
-}
-
-
-function downloadResume() {
-
-    const resumePath = "/assets/Ayush-Sharma-Resume.pdf";
-
-    const link = document.createElement("a");
-
-    link.href = resumePath;
-
-    link.download = "Ayush-Sharma-Resume.pdf";
-
-    document.body.appendChild(link);
-
-    link.click();
-
-    document.body.removeChild(link);
-
-}
-
-
-/* =========================================================
-   11. CLOSE RESUME MODAL OUTSIDE
-   ========================================================= */
-
-if (resumeModal) {
-
-    resumeModal.addEventListener("click", (e) => {
-
-        if (e.target === resumeModal) {
-            closeResume();
-        }
-
-    });
-
-}
-
-
-/* =========================================================
-   12. CONTACT FORM → WHATSAPP
-   ========================================================= */
-
-const contactForm = document.getElementById("contactForm");
-
-const formMessage = document.getElementById("formMessage");
-
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-
-        /* -----------------------------
-           GET FORM VALUES
-        ----------------------------- */
-
-        const nameInput =
-            contactForm.querySelector('input[type="text"]');
-
-        const emailInput =
-            contactForm.querySelector('input[type="email"]');
-
-        const projectType =
-            document.getElementById("projectType");
-
-        const budgetRange =
-            document.getElementById("budgetRange");
-
-        const textarea =
-            contactForm.querySelector("textarea");
-
-
-        const name =
-            nameInput
-                ? nameInput.value.trim()
-                : "";
-
-
-        const email =
-            emailInput
-                ? emailInput.value.trim()
-                : "";
-
-
-        const project =
-            projectType
-                ? projectType.value
-                : "";
-
-
-        const budget =
-            budgetRange
-                ? budgetRange.value
-                : "";
-
-
-        const message =
-            textarea
-                ? textarea.value.trim()
-                : "";
-
-
-        /* -----------------------------
-           VALIDATION
-        ----------------------------- */
-
-        if (!name || !email || !message) {
-
-            if (formMessage) {
-
-                formMessage.textContent =
-                    "Please fill all required fields.";
-
-                formMessage.classList.remove("hidden");
+                });
 
             }
 
-            return;
+
+            projectModal.classList.remove("hidden");
+
+            projectModal.classList.add("flex");
+
+            document.body.classList.add("overflow-hidden");
 
         }
 
 
-        /* -----------------------------
-           AYUSH WHATSAPP NUMBER
-        ----------------------------- */
+        function closeProject() {
 
-        const whatsappNumber =
-            "916397165594";
+            if (!projectModal) {
+                return;
+            }
+
+            projectModal.classList.add("hidden");
+
+            projectModal.classList.remove("flex");
+
+            document.body.classList.remove("overflow-hidden");
+
+        }
 
 
-        /* -----------------------------
-           WHATSAPP MESSAGE
-        ----------------------------- */
+        /* =========================================================
+           9. CLOSE PROJECT MODAL WHEN CLICKING OUTSIDE
+           ========================================================= */
 
-        const whatsappMessage =
-`Hello Ayush 👋
+        if (projectModal) {
+
+            projectModal.addEventListener("click", (e) => {
+
+                if (e.target === projectModal) {
+                    closeProject();
+                }
+
+            });
+
+        }
+
+
+        /* =========================================================
+           10. RESUME MODAL
+           ========================================================= */
+
+        const resumeModal = document.getElementById("resumeModal");
+
+
+        function openResume() {
+
+            if (!resumeModal) {
+                return;
+            }
+
+            resumeModal.classList.remove("hidden");
+
+            resumeModal.classList.add("flex");
+
+            document.body.classList.add("overflow-hidden");
+
+        }
+
+
+        function closeResume() {
+
+            if (!resumeModal) {
+                return;
+            }
+
+            resumeModal.classList.add("hidden");
+
+            resumeModal.classList.remove("flex");
+
+            document.body.classList.remove("overflow-hidden");
+
+        }
+
+
+        function downloadResume() {
+
+            const resumePath = "/assets/Ayush-Sharma-Resume.pdf";
+
+            const link = document.createElement("a");
+
+            link.href = resumePath;
+
+            link.download = "Ayush-Sharma-Resume.pdf";
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            document.body.removeChild(link);
+
+        }
+
+
+        /* =========================================================
+           11. CLOSE RESUME MODAL OUTSIDE
+           ========================================================= */
+
+        if (resumeModal) {
+
+            resumeModal.addEventListener("click", (e) => {
+
+                if (e.target === resumeModal) {
+                    closeResume();
+                }
+
+            });
+
+        }
+
+
+        /* =========================================================
+           12. CONTACT FORM → WHATSAPP
+           ========================================================= */
+
+        const contactForm = document.getElementById("contactForm");
+
+        const formMessage = document.getElementById("formMessage");
+
+
+        if (contactForm) {
+
+            contactForm.addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+
+                /* -----------------------------
+                   GET FORM VALUES
+                ----------------------------- */
+
+                const nameInput =
+                    contactForm.querySelector('input[type="text"]');
+
+                const emailInput =
+                    contactForm.querySelector('input[type="email"]');
+
+                const projectType =
+                    document.getElementById("projectType");
+
+                const budgetRange =
+                    document.getElementById("budgetRange");
+
+                const textarea =
+                    contactForm.querySelector("textarea");
+
+
+                const name =
+                    nameInput
+                        ? nameInput.value.trim()
+                        : "";
+
+
+                const email =
+                    emailInput
+                        ? emailInput.value.trim()
+                        : "";
+
+
+                const project =
+                    projectType
+                        ? projectType.value
+                        : "";
+
+
+                const budget =
+                    budgetRange
+                        ? budgetRange.value
+                        : "";
+
+
+                const message =
+                    textarea
+                        ? textarea.value.trim()
+                        : "";
+
+
+                /* -----------------------------
+                   VALIDATION
+                ----------------------------- */
+
+                if (!name || !email || !message) {
+
+                    if (formMessage) {
+
+                        formMessage.textContent =
+                            "Please fill all required fields.";
+
+                        formMessage.classList.remove("hidden");
+
+                    }
+
+                    return;
+
+                }
+
+
+                /* -----------------------------
+                   AYUSH WHATSAPP NUMBER
+                ----------------------------- */
+
+                const whatsappNumber =
+                    "916397165594";
+
+
+                /* -----------------------------
+                   WHATSAPP MESSAGE
+                ----------------------------- */
+
+                const whatsappMessage =
+                    `Hello Ayush 👋
 
 I want to discuss a website project with you.
 
@@ -2806,103 +2813,103 @@ ${message}
 Sent from Ayush Sharma Portfolio`;
 
 
-        /* -----------------------------
-           WHATSAPP URL
-        ----------------------------- */
+                /* -----------------------------
+                   WHATSAPP URL
+                ----------------------------- */
 
-        const whatsappURL =
-            "https://wa.me/" +
-            whatsappNumber +
-            "?text=" +
-            encodeURIComponent(whatsappMessage);
-
-
-        /* -----------------------------
-           OPEN WHATSAPP
-        ----------------------------- */
-
-        window.location.href = whatsappURL;
+                const whatsappURL =
+                    "https://wa.me/" +
+                    whatsappNumber +
+                    "?text=" +
+                    encodeURIComponent(whatsappMessage);
 
 
-        /* -----------------------------
-           RESET FORM
-        ----------------------------- */
+                /* -----------------------------
+                   OPEN WHATSAPP
+                ----------------------------- */
 
-        setTimeout(() => {
-
-            contactForm.reset();
-
-        }, 100);
+                window.location.href = whatsappURL;
 
 
-    });
+                /* -----------------------------
+                   RESET FORM
+                ----------------------------- */
 
-}
+                setTimeout(() => {
 
+                    contactForm.reset();
 
-/* =========================================================
-   13. CURRENT YEAR
-   ========================================================= */
-
-const yearElements =
-    document.querySelectorAll("[data-year]");
+                }, 100);
 
 
-yearElements.forEach((element) => {
+            });
 
-    element.textContent =
-        new Date().getFullYear();
-
-});
+        }
 
 
-/* =========================================================
-   14. IMAGE LAZY LOADING
-   ========================================================= */
+        /* =========================================================
+           13. CURRENT YEAR
+           ========================================================= */
 
-document.querySelectorAll("img").forEach((image) => {
+        const yearElements =
+            document.querySelectorAll("[data-year]");
 
-    if (!image.hasAttribute("loading")) {
 
-        image.setAttribute(
-            "loading",
-            "lazy"
+        yearElements.forEach((element) => {
+
+            element.textContent =
+                new Date().getFullYear();
+
+        });
+
+
+        /* =========================================================
+           14. IMAGE LAZY LOADING
+           ========================================================= */
+
+        document.querySelectorAll("img").forEach((image) => {
+
+            if (!image.hasAttribute("loading")) {
+
+                image.setAttribute(
+                    "loading",
+                    "lazy"
+                );
+
+            }
+
+        });
+
+
+        /* =========================================================
+           15. PREVENT BROKEN IMAGE LAYOUT
+           ========================================================= */
+
+        document.querySelectorAll("img").forEach((image) => {
+
+            image.addEventListener("error", () => {
+
+                image.style.opacity = "0.4";
+
+            });
+
+        });
+
+
+        /* =========================================================
+           16. CONSOLE MESSAGE
+           ========================================================= */
+
+        console.log(
+            "%cAyush Sharma — Web Developer",
+            "font-size:18px;font-weight:bold;"
         );
 
-    }
-
-});
-
-
-/* =========================================================
-   15. PREVENT BROKEN IMAGE LAYOUT
-   ========================================================= */
-
-document.querySelectorAll("img").forEach((image) => {
-
-    image.addEventListener("error", () => {
-
-        image.style.opacity = "0.4";
-
-    });
-
-});
-
-
-/* =========================================================
-   16. CONSOLE MESSAGE
-   ========================================================= */
-
-console.log(
-    "%cAyush Sharma — Web Developer",
-    "font-size:18px;font-weight:bold;"
-);
-
-console.log(
-    "%cPortfolio loaded successfully.",
-    "font-size:13px;"
-);
-</script>
+        console.log(
+            "%cPortfolio loaded successfully.",
+            "font-size:13px;"
+        );
+    </script>
 
 </body>
 
